@@ -1,0 +1,2 @@
+Composicion finder->warranty estaba mal
+Composicion finder->category estaba mal
