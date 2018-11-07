@@ -58,5 +58,13 @@
 	</bean>
 	
 	<!-- Other domain beans come here -->	
+	<bean id="message1" class="domain.Message">
+		<property name="sendDate" value="08/11/2018"/>
+		<property name="recipient" ref="Actor2"/>
+		<property name="sender" ref="Actor1"/>
+		<property name="subject" value="subject1"/>
+		<property name="body" value="body1"/>
+		<property name="priotity" value="1"/>
+	</bean>
 	
 </beans>
