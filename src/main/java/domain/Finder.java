@@ -7,6 +7,8 @@ import java.util.Date;
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -71,6 +73,7 @@ public class Finder extends DomainEntity {
 
 	@NotNull
 	@Valid
+	@OneToOne(optional = false)
 	public Configuration getConfiguration() {
 		return this.configuration;
 	}
@@ -80,6 +83,7 @@ public class Finder extends DomainEntity {
 	}
 
 	@Valid
+	@OneToMany
 	public Collection<Fix_up_Task> getFixUpTask() {
 		return this.fixUpTask;
 	}
@@ -89,6 +93,7 @@ public class Finder extends DomainEntity {
 	}
 
 	@Valid
+	@OneToMany
 	public Collection<Warranty> getWarranties() {
 		return this.warranties;
 	}
@@ -98,6 +103,7 @@ public class Finder extends DomainEntity {
 	}
 
 	@Valid
+	@OneToMany
 	public Collection<Category> getCategories() {
 		return this.categories;
 	}

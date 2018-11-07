@@ -3,6 +3,8 @@ package domain;
 
 import java.util.Collection;
 
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -12,9 +14,21 @@ public class HandyWorker extends Actor {
 	private Collection<Application>	applications;
 	private Collection<Phase>		phases;
 	private Curricula				curricula;
+	private Collection<Finder>		finder;
 
 
 	@Valid
+	@OneToMany
+	public Collection<Finder> getFinder() {
+		return this.finder;
+	}
+
+	public void setFinder(final Collection<Finder> finder) {
+		this.finder = finder;
+	}
+
+	@Valid
+	@OneToMany
 	public Collection<Application> getApplications() {
 		return this.applications;
 	}
@@ -23,6 +37,7 @@ public class HandyWorker extends Actor {
 		this.applications = applications;
 	}
 	@Valid
+	@OneToMany
 	public Collection<Phase> getPhases() {
 		return this.phases;
 	}
@@ -33,6 +48,7 @@ public class HandyWorker extends Actor {
 
 	@NotNull
 	@Valid
+	@OneToOne(optional = false)
 	public Curricula getCurricula() {
 		return this.curricula;
 	}
