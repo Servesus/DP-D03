@@ -28,7 +28,7 @@ public class HandyWorker extends Actor {
 	}
 
 	@Valid
-	@OneToMany
+	@OneToMany(mappedBy = "application")
 	public Collection<Application> getApplications() {
 		return this.applications;
 	}

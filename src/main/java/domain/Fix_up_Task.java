@@ -8,6 +8,7 @@ import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
@@ -90,6 +91,7 @@ public class Fix_up_Task extends DomainEntity {
 	//Relationships:
 
 	@Valid
+	@ManyToMany
 	public Collection<Application> getAplications() {
 		return this.aplications;
 	}

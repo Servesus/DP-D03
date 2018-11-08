@@ -7,6 +7,10 @@ import java.util.Date;
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -27,6 +31,7 @@ public class Application extends DomainEntity {
 
 
 	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
 	public Date getMoment() {
 		return this.moment;
 	}
@@ -78,6 +83,7 @@ public class Application extends DomainEntity {
 
 	@Valid
 	@NotNull
+	@ManyToOne(optional = false)
 	public HandyWorker getHandyWorker() {
 		return this.handyWorker;
 	}
@@ -87,6 +93,7 @@ public class Application extends DomainEntity {
 	}
 
 	@Valid
+	@ManyToMany(mappedBy = "fixUpTask")
 	public Collection<Fix_up_Task> getFixUpTasks() {
 		return this.fixUpTasks;
 	}
