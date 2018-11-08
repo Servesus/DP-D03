@@ -5,7 +5,9 @@ import java.util.Collection;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
@@ -122,6 +124,7 @@ public abstract class Actor extends DomainEntity {
 
 	@Valid
 	@NotNull
+	@OneToMany(cascade = CascadeType.ALL)
 	public Collection<UserAccount> getUserAccounts() {
 		return this.userAccounts;
 	}
@@ -131,6 +134,7 @@ public abstract class Actor extends DomainEntity {
 	}
 
 	@Valid
+	@OneToMany(cascade = CascadeType.ALL)
 	public Collection<Profile> getProfiles() {
 		return this.profiles;
 	}
@@ -140,6 +144,7 @@ public abstract class Actor extends DomainEntity {
 	}
 
 	@Valid
+	@OneToMany
 	public Collection<Message> getMessages() {
 		return this.messages;
 	}

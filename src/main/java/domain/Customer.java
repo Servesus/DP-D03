@@ -5,7 +5,9 @@ import java.util.Collection;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import javax.validation.Valid;
 
 @Entity
@@ -18,6 +20,7 @@ public class Customer extends Actor {
 
 
 	@Valid
+	@OneToMany(cascade = CascadeType.ALL)
 	public Collection<CreditCard> getCreditCards() {
 		return this.creditCards;
 	}
@@ -27,6 +30,7 @@ public class Customer extends Actor {
 	}
 
 	@Valid
+	@OneToMany
 	public Collection<Complaint> getComplaints() {
 		return this.complaints;
 	}
@@ -36,6 +40,7 @@ public class Customer extends Actor {
 	}
 
 	@Valid
+	@OneToMany
 	public Collection<Fix_up_Task> getFixUpTasks() {
 		return this.fixUpTasks;
 	}
