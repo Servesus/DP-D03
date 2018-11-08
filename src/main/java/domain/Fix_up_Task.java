@@ -9,6 +9,10 @@ import javax.persistence.AccessType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
@@ -47,6 +51,7 @@ public class Fix_up_Task extends DomainEntity {
 	}
 
 	@DateTimeFormat(pattern = "dd/MM/yyyy HH:mm")
+	@Temporal(TemporalType.DATE)
 	public Date getStarDate() {
 		return this.starDate;
 	}
@@ -101,6 +106,7 @@ public class Fix_up_Task extends DomainEntity {
 	}
 
 	@Valid
+	@ManyToMany
 	public Collection<Complaint> getComplaints() {
 		return this.complaints;
 	}
@@ -111,6 +117,7 @@ public class Fix_up_Task extends DomainEntity {
 
 	@Valid
 	@NotNull
+	@ManyToOne(optional = false)
 	public Finder getFinder() {
 		return this.finder;
 	}
@@ -121,6 +128,7 @@ public class Fix_up_Task extends DomainEntity {
 
 	@Valid
 	@NotNull
+	@OneToOne(optional = false)
 	public Warranty getWarranty() {
 		return this.warranty;
 	}
@@ -131,6 +139,7 @@ public class Fix_up_Task extends DomainEntity {
 
 	@Valid
 	@NotNull
+	@ManyToOne
 	public Category getCategory() {
 		return this.category;
 	}

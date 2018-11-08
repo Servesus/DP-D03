@@ -8,6 +8,10 @@ import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
@@ -41,6 +45,7 @@ public class Complaint extends DomainEntity {
 		this.ticker = ticker;
 	}
 
+	@Temporal(TemporalType.TIMESTAMP)
 	public Date getMoment() {
 		return this.moment;
 	}
@@ -70,6 +75,7 @@ public class Complaint extends DomainEntity {
 
 	@NotNull
 	@Valid
+	@ManyToOne(optional = false)
 	public Customer getCustomer() {
 		return this.customer;
 	}
@@ -79,6 +85,7 @@ public class Complaint extends DomainEntity {
 	}
 
 	@Valid
+	@ManyToMany
 	public Collection<Report> getReports() {
 		return this.reports;
 	}
@@ -88,6 +95,7 @@ public class Complaint extends DomainEntity {
 	}
 
 	@Valid
+	@ManyToMany
 	public Collection<Fix_up_Task> getFix_up_tasks() {
 		return this.fix_up_tasks;
 	}
