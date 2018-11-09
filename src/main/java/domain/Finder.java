@@ -83,7 +83,7 @@ public class Finder extends DomainEntity {
 	}
 
 	@Valid
-	@OneToMany
+	@OneToMany(mappedBy = "finder")
 	public Collection<Fix_up_Task> getFixUpTask() {
 		return this.fixUpTask;
 	}

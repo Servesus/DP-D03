@@ -10,6 +10,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -37,6 +38,7 @@ public class Fix_up_Task extends DomainEntity {
 	private Finder					finder;
 	private Warranty				warranty;
 	private Category				category;
+	private Collection<Phase>		phases;
 
 
 	@NotBlank
@@ -96,7 +98,7 @@ public class Fix_up_Task extends DomainEntity {
 	//Relationships:
 
 	@Valid
-	@ManyToMany
+	@ManyToMany(mappedBy = "fixUpTasks")
 	public Collection<Application> getAplications() {
 		return this.aplications;
 	}
@@ -146,5 +148,15 @@ public class Fix_up_Task extends DomainEntity {
 
 	public void setCategory(final Category category) {
 		this.category = category;
+	}
+
+	@Valid
+	@OneToMany(mappedBy = "fixUpTask")
+	public Collection<Phase> getPhases() {
+		return this.phases;
+	}
+
+	public void setPhases(final Collection<Phase> phases) {
+		this.phases = phases;
 	}
 }

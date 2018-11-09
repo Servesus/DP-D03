@@ -30,7 +30,7 @@ public class Customer extends Actor {
 	}
 
 	@Valid
-	@OneToMany
+	@OneToMany(mappedBy = "customer")
 	public Collection<Complaint> getComplaints() {
 		return this.complaints;
 	}
