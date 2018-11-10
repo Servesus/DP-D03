@@ -19,8 +19,8 @@
 	<!-- User accounts -->
 
 	<bean id="userAccount1" class="security.UserAccount">
-		<property name="username" value="admin" />
-		<property name="password" value="21232f297a57a5a743894a0e4a801fc3" />
+		<property name="username" value="admin1" />
+		<property name="password" value="admin1Pass" />
 		<property name="authorities">
 			<list>
 				<bean class="security.Authority">
@@ -31,8 +31,8 @@
 	</bean>
 
 	<bean id="userAccount2" class="security.UserAccount">
-		<property name="username" value="customer" />
-		<property name="password" value="91ec1f9324753048c0096d036a694f86" />
+		<property name="username" value="customer1" />
+		<property name="password" value="customer1Pass" />
 		<property name="authorities">
 			<list>
 				<bean class="security.Authority">
@@ -43,15 +43,24 @@
 	</bean>
 
 	<bean id="userAccount3" class="security.UserAccount">
-		<property name="username" value="super" />
-		<property name="password" value="1b3231655cebb7a1f783eddf27d254ca" />
+		<property name="username" value="referee1" />
+		<property name="password" value="referee1Pass" />
 		<property name="authorities">
 			<list>
 				<bean class="security.Authority">
-					<property name="authority" value="ADMIN" />
+					<property name="authority" value="REFEREE" />
 				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="userAccount4" class="security.UserAccount">
+		<property name="username" value="handyWorker1" />
+		<property name="password" value="handyWorker1Pass" />
+		<property name="authorities">
+			<list>
 				<bean class="security.Authority">
-					<property name="authority" value="CUSTOMER" />
+					<property name="authority" value="HANDYWORKER" />
 				</bean>
 			</list>
 		</property>
@@ -66,5 +75,56 @@
 		<property name="body" value="body1"/>
 		<property name="priotity" value="1"/>
 	</bean>
+	
+	<bean id="customer1" class="domain.Customer">
+		<property name="name" value="customer1"/>
+		<property name="middleName" value=""/>
+		<property name="surname" value="surname"/>
+		<property name="photo" value=""/>
+		<property name="email" value="customer1@gmail.com"/>
+		<property name="phoneNumber" value="617910517"/>
+		<property name="address" value="Gran Vía"/>
+		<property name="make" value=""/>
+		<property name="isSuspicious" value="false"/>
+		<property name="isBanned" value="false"/>
+		<property name="userAccount" ref="customerAccount1"/>
+		<property name="profiles">
+			<list>
+				<ref bean= "customer1Twitter"/>
+				<ref bean= "customer1Instagram"/>
+			</list>
+		</property>
+		<property name="messages">
+			<list>
+				<ref bean="message1"/>
+			</list>
+		</property>
+		<property name="creditCards">
+			<list>
+			<ref bean="creditCard1"/>
+			</list>
+		</property>
+		<property name="complaints">
+			<list>
+			<ref bean="complaint1"/>
+			</list>
+		</property>
+		<property name="fixUpTasks">
+			<list>
+			<ref bean="fixUpTasks1"/>
+			<ref bean="fixUpTask2"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="creditCard1" class="domain.CreditCard">
+		<property name="holderName" value="holderName1"/>
+		<property name="brandName" value="brandName1"/>
+		<property name="number" value="4937799861508973"/>
+		<property name="month" value="8"/>
+		<property name="expirationYear" value="2022"/>
+		<property name="cvv" value="3510"/>
+	</bean>
+	
 	
 </beans>
