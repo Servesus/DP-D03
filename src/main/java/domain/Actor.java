@@ -8,6 +8,7 @@ import javax.persistence.AccessType;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
@@ -22,19 +23,19 @@ import security.UserAccount;
 @Access(AccessType.PROPERTY)
 public abstract class Actor extends DomainEntity {
 
-	private String					name;
-	private String					middleName;
-	private String					surname;
-	private String					photo;
-	private String					email;
-	private String					phoneNumber;
-	private String					address;
-	private String					make	= this.name + this.middleName + this.surname;
-	private boolean					isSuspicious;
-	private boolean					isBanned;
-	private Collection<UserAccount>	userAccounts;
-	private Collection<Profile>		profiles;
-	private Collection<Message>		messages;
+	private String				name;
+	private String				middleName;
+	private String				surname;
+	private String				photo;
+	private String				email;
+	private String				phoneNumber;
+	private String				address;
+	private String				make	= this.name + this.middleName + this.surname;
+	private boolean				isSuspicious;
+	private boolean				isBanned;
+	private UserAccount			userAccount;
+	private Collection<Profile>	profiles;
+	private Collection<Message>	messages;
 
 
 	@NotBlank
@@ -124,13 +125,13 @@ public abstract class Actor extends DomainEntity {
 
 	@Valid
 	@NotNull
-	@OneToMany(cascade = CascadeType.ALL)
-	public Collection<UserAccount> getUserAccounts() {
-		return this.userAccounts;
+	@OneToOne(cascade = CascadeType.ALL)
+	public UserAccount getUserAccount() {
+		return this.userAccount;
 	}
 
-	public void setUserAccount(final Collection<UserAccount> userAccounts) {
-		this.userAccounts = userAccounts;
+	public void setUserAccount(final UserAccount userAccount) {
+		this.userAccount = userAccount;
 	}
 
 	@Valid

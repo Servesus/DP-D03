@@ -36,7 +36,7 @@ public class CreditCard extends Customer {
 		return this.number;
 	}
 
-	@Range(min = 0, max = 12)
+	@Range(min = 1, max = 12)
 	public int getMonth() {
 		return this.month;
 	}
