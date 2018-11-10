@@ -6,10 +6,7 @@ import java.util.Collection;
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
-<<<<<<< HEAD
-=======
 import javax.persistence.ManyToMany;
->>>>>>> 97517ca787832acb57d01fc5c4fc501b4a33e52d
 
 import org.hibernate.validator.constraints.NotBlank;
 
@@ -36,18 +33,11 @@ public class Category extends DomainEntity {
 	private Collection<Category>	parents;
 
 
-<<<<<<< HEAD
-	public Collection<Category> getChilds() {
-		return this.childs;
-	}
-
-=======
 	@ManyToMany(mappedBy = "parents")
 	public Collection<Category> getChilds() {
 		return this.childs;
 	}
 	@ManyToMany
->>>>>>> 97517ca787832acb57d01fc5c4fc501b4a33e52d
 	public Collection<Category> getParents() {
 		return this.parents;
 	}
