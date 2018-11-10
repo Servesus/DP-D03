@@ -6,8 +6,12 @@ import java.util.Date;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.validation.Valid;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotBlank;
@@ -26,6 +30,7 @@ public class Report extends DomainEntity {
 
 	//Getters and setters
 	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
 	public Date getMoment() {
 		return this.moment;
 	}
@@ -67,18 +72,18 @@ public class Report extends DomainEntity {
 	private Collection<Referee>		referees;
 
 
-	@Valid
+	@OneToMany(cascade = CascadeType.ALL)
 	public Collection<Note> getNotes() {
 		return this.notes;
 	}
 
-	@Valid
+	@ManyToMany
 	public Collection<Complaint> getComplaint() {
 		return this.complaint;
 	}
 
 	@NotNull
-	@Valid
+	@ManyToMany
 	public Collection<Referee> getReferees() {
 		return this.referees;
 	}
