@@ -35,7 +35,7 @@ public abstract class Actor extends DomainEntity {
 	private boolean				isBanned;
 	private UserAccount			userAccount;
 	private Collection<Profile>	profiles;
-	private Collection<Message>	messages;
+	private Collection<Box>		box;
 
 
 	@NotBlank
@@ -144,12 +144,12 @@ public abstract class Actor extends DomainEntity {
 	}
 
 	@OneToMany
-	public Collection<Message> getMessages() {
-		return this.messages;
+	public Collection<Box> getBox() {
+		return this.box;
 	}
 
-	public void setMessages(final Collection<Message> messages) {
-		this.messages = messages;
+	public void setBoxes(final Collection<Box> boxes) {
+		this.box = boxes;
 	}
 
 }

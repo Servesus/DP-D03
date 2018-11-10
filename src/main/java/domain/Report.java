@@ -6,7 +6,15 @@ import java.util.Date;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+<<<<<<< HEAD
+=======
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+>>>>>>> 97517ca787832acb57d01fc5c4fc501b4a33e52d
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotBlank;
@@ -25,6 +33,7 @@ public class Report extends DomainEntity {
 
 	//Getters and setters
 	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
 	public Date getMoment() {
 		return this.moment;
 	}
@@ -66,15 +75,27 @@ public class Report extends DomainEntity {
 	private Collection<Referee>		referees;
 
 
+<<<<<<< HEAD
+=======
+	@OneToMany(cascade = CascadeType.ALL)
+>>>>>>> 97517ca787832acb57d01fc5c4fc501b4a33e52d
 	public Collection<Note> getNotes() {
 		return this.notes;
 	}
 
+<<<<<<< HEAD
+=======
+	@ManyToMany
+>>>>>>> 97517ca787832acb57d01fc5c4fc501b4a33e52d
 	public Collection<Complaint> getComplaint() {
 		return this.complaint;
 	}
 
 	@NotNull
+<<<<<<< HEAD
+=======
+	@ManyToMany
+>>>>>>> 97517ca787832acb57d01fc5c4fc501b4a33e52d
 	public Collection<Referee> getReferees() {
 		return this.referees;
 	}
