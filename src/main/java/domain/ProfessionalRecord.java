@@ -6,6 +6,7 @@ import java.util.Date;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
@@ -62,6 +63,7 @@ public class ProfessionalRecord extends DomainEntity {
 	public void setAttachment(final String attachment) {
 		this.attachment = attachment;
 	}
+	@ElementCollection
 	public Collection<String> getComment() {
 		return this.comment;
 	}

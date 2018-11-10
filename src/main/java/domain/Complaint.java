@@ -7,6 +7,7 @@ import java.util.Date;
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
@@ -62,7 +63,7 @@ public class Complaint extends DomainEntity {
 	public void setDescription(final String description) {
 		this.description = description;
 	}
-
+	@ElementCollection
 	public Collection<String> getAttchment() {
 		return this.attchment;
 	}
@@ -84,7 +85,6 @@ public class Complaint extends DomainEntity {
 		this.customer = customer;
 	}
 
-	@Valid
 	@ManyToMany(mappedBy = "complaint")
 	public Collection<Report> getReports() {
 		return this.reports;
@@ -94,7 +94,6 @@ public class Complaint extends DomainEntity {
 		this.reports = reports;
 	}
 
-	@Valid
 	@ManyToMany(mappedBy = "complaints")
 	public Collection<Fix_up_Task> getFix_up_tasks() {
 		return this.fix_up_tasks;

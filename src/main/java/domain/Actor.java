@@ -134,7 +134,6 @@ public abstract class Actor extends DomainEntity {
 		this.userAccount = userAccount;
 	}
 
-	@Valid
 	@OneToMany(cascade = CascadeType.ALL)
 	public Collection<Profile> getProfiles() {
 		return this.profiles;
@@ -144,7 +143,6 @@ public abstract class Actor extends DomainEntity {
 		this.profiles = profiles;
 	}
 
-	@Valid
 	@OneToMany
 	public Collection<Message> getMessages() {
 		return this.messages;

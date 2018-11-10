@@ -6,7 +6,6 @@ import java.util.Collection;
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
-import javax.validation.Valid;
 
 import org.hibernate.validator.constraints.NotBlank;
 
@@ -34,21 +33,21 @@ public class Box extends DomainEntity {
 	public void setIsSystem(final Boolean isSystem) {
 		this.isSystem = isSystem;
 	}
-	@Valid
+
 	public Collection<Box> getParentBoxes() {
 		return this.parentBoxes;
 	}
 	public void setParentBoxes(final Collection<Box> parentBoxes) {
 		this.parentBoxes = parentBoxes;
 	}
-	@Valid
+
 	public Collection<Box> getChildBoxes() {
 		return this.childBoxes;
 	}
 	public void setChildBoxes(final Collection<Box> childBoxes) {
 		this.childBoxes = childBoxes;
 	}
-	@Valid
+
 	public Collection<Message> getMessages() {
 		return this.messages;
 	}

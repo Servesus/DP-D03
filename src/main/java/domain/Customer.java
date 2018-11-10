@@ -8,7 +8,6 @@ import javax.persistence.AccessType;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
-import javax.validation.Valid;
 
 @Entity
 @Access(AccessType.PROPERTY)
@@ -19,7 +18,6 @@ public class Customer extends Actor {
 	private Collection<Fix_up_Task>	fixUpTasks;
 
 
-	@Valid
 	@OneToMany(cascade = CascadeType.ALL)
 	public Collection<CreditCard> getCreditCards() {
 		return this.creditCards;
@@ -29,7 +27,6 @@ public class Customer extends Actor {
 		this.creditCards = creditCards;
 	}
 
-	@Valid
 	@OneToMany(mappedBy = "customer")
 	public Collection<Complaint> getComplaints() {
 		return this.complaints;
@@ -39,7 +36,6 @@ public class Customer extends Actor {
 		this.complaints = complaints;
 	}
 
-	@Valid
 	@OneToMany
 	public Collection<Fix_up_Task> getFixUpTasks() {
 		return this.fixUpTasks;

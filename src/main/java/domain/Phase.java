@@ -7,6 +7,8 @@ import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -41,6 +43,7 @@ public class Phase extends DomainEntity {
 		this.description = description;
 	}
 	@NotNull
+	@Temporal(TemporalType.DATE)
 	public Date getStartMoment() {
 		return this.startMoment;
 	}
@@ -49,6 +52,7 @@ public class Phase extends DomainEntity {
 		this.startMoment = startMoment;
 	}
 	@NotNull
+	@Temporal(TemporalType.DATE)
 	public Date getFinishMoment() {
 		return this.finishMoment;
 	}

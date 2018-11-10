@@ -17,7 +17,7 @@
 	">
 	
 	<!-- User accounts -->
-
+	<!--  
 	<bean id="userAccount1" class="security.UserAccount">
 		<property name="username" value="admin1" />
 		<property name="password" value="admin1Pass" />
@@ -65,7 +65,7 @@
 			</list>
 		</property>
 	</bean>
-	
+	-->
 	<!-- Other domain beans come here -->	
 	<bean id="message1" class="domain.Message">
 		<property name="sendDate" value="08/11/2018"/>
@@ -75,7 +75,7 @@
 		<property name="body" value="body1"/>
 		<property name="priotity" value="1"/>
 	</bean>
-	
+	<!--  	
 	<bean id="customer1" class="domain.Customer">
 		<property name="name" value="customer1"/>
 		<property name="middleName" value=""/>
@@ -126,5 +126,5 @@
 		<property name="cvv" value="3510"/>
 	</bean>
 	
-	
+	-->
 </beans>

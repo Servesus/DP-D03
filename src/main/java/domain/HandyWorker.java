@@ -3,11 +3,16 @@ package domain;
 
 import java.util.Collection;
 
+import javax.persistence.Access;
+import javax.persistence.AccessType;
+import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+@Entity
+@Access(AccessType.PROPERTY)
 public class HandyWorker extends Actor {
 
 	//Relationships
@@ -17,7 +22,6 @@ public class HandyWorker extends Actor {
 	private Collection<Finder>		finder;
 
 
-	@Valid
 	@OneToMany
 	public Collection<Finder> getFinder() {
 		return this.finder;
@@ -27,8 +31,7 @@ public class HandyWorker extends Actor {
 		this.finder = finder;
 	}
 
-	@Valid
-	@OneToMany(mappedBy = "application")
+	@OneToMany(mappedBy = "handyWorker")
 	public Collection<Application> getApplications() {
 		return this.applications;
 	}
@@ -36,7 +39,7 @@ public class HandyWorker extends Actor {
 	public void setApplications(final Collection<Application> applications) {
 		this.applications = applications;
 	}
-	@Valid
+
 	@OneToMany
 	public Collection<Phase> getPhases() {
 		return this.phases;

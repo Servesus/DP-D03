@@ -7,6 +7,8 @@ import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -38,7 +40,8 @@ public class Configuration extends DomainEntity {
 	public void setMaxTime(final int maxTime) {
 		this.maxTime = maxTime;
 	}
-
+	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
 	public Date getLastUpdate() {
 		return this.lastUpdate;
 	}

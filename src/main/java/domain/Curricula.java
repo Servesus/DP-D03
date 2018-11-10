@@ -42,28 +42,28 @@ public class Curricula extends DomainEntity {
 	public void setPersonalRecord(final PersonalRecord personalRecord) {
 		this.personalRecord = personalRecord;
 	}
-	@Valid
+
 	public Collection<EducationalRecord> getEducationalRecord() {
 		return this.educationalRecord;
 	}
 	public void setEducationalRecord(final Collection<EducationalRecord> educationalRecord) {
 		this.educationalRecord = educationalRecord;
 	}
-	@Valid
+
 	public Collection<ProfessionalRecord> getProfessionalRecord() {
 		return this.professionalRecord;
 	}
 	public void setProfessionalRecord(final Collection<ProfessionalRecord> professionalRecord) {
 		this.professionalRecord = professionalRecord;
 	}
-	@Valid
+
 	public Collection<EndorserRecord> getEndorserRecord() {
 		return this.endorserRecord;
 	}
 	public void setEndorserRecord(final Collection<EndorserRecord> endorserRecord) {
 		this.endorserRecord = endorserRecord;
 	}
-	@Valid
+
 	public Collection<MiscRecord> getMiscRecord() {
 		return this.miscRecord;
 	}
