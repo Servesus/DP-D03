@@ -85,7 +85,7 @@ public class Complaint extends DomainEntity {
 	}
 
 	@Valid
-	@ManyToMany
+	@ManyToMany(mappedBy = "complaint")
 	public Collection<Report> getReports() {
 		return this.reports;
 	}
@@ -95,7 +95,7 @@ public class Complaint extends DomainEntity {
 	}
 
 	@Valid
-	@ManyToMany
+	@ManyToMany(mappedBy = "complaints")
 	public Collection<Fix_up_Task> getFix_up_tasks() {
 		return this.fix_up_tasks;
 	}
