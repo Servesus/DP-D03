@@ -127,4 +127,18 @@
 	</bean>
 	
 	-->
+	
+	<!-- Profile -->	
+	<bean id="profile1" class="domain.Profile">
+		<property name="nick" value="Xtr3m3"/>
+		<property name="socialNetName" value="Xtr3me1998"/>
+		<property name="socialNetProfLink" value="https://www.twitch.tv/xtreme"/>
+		<property name="name" value="valenciano"/>
+	</bean>
+	<bean id="profile2" class="domain.Profile">
+		<property name="nick" value="Reven"/>
+		<property name="socialNetName" value="Reventxz"/>
+		<property name="socialNetProfLink" value="https://www.twitch.tv/reventxz"/>
+		<property name="name" value="Antonio Pino"/>
+	</bean>
 </beans>
