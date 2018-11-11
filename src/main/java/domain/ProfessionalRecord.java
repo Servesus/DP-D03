@@ -8,6 +8,8 @@ import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 
@@ -35,6 +37,7 @@ public class ProfessionalRecord extends DomainEntity {
 	}
 	@NotNull
 	@Past
+	@Temporal(TemporalType.DATE)
 	public Date getJobBeggining() {
 		return this.jobBeggining;
 	}
@@ -43,6 +46,7 @@ public class ProfessionalRecord extends DomainEntity {
 	}
 	@NotNull
 	@Past
+	@Temporal(TemporalType.DATE)
 	public Date getJobEnding() {
 		return this.jobEnding;
 	}
