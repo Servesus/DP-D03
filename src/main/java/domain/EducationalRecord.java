@@ -66,10 +66,10 @@ public class EducationalRecord extends DomainEntity {
 		this.attachment = attachment;
 	}
 	@ElementCollection
-	public Collection<String> getComment() {
+	public Collection<String> getComments() {
 		return this.comments;
 	}
-	public void setComment(final Collection<String> comment) {
+	public void setComments(final Collection<String> comment) {
 		this.comments = comment;
 	}
 }

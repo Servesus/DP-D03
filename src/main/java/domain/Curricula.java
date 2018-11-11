@@ -30,7 +30,7 @@ public class Curricula extends DomainEntity {
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "^(\\d{6})(-)([A-Z0-9] {6})$")
+	@Pattern(regexp = "^(\\d{6}(-)\\w{6})$")
 	public String getTicker() {
 		return this.ticker;
 	}
