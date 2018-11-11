@@ -17,7 +17,6 @@
 	">
 	
 	<!-- User accounts -->
-	<!--  
 	<bean id="userAccount1" class="security.UserAccount">
 		<property name="username" value="admin1" />
 		<property name="password" value="admin1Pass" />
@@ -65,9 +64,7 @@
 			</list>
 		</property>
 	</bean>
-	-->
 	<!-- Other domain beans come here -->	
-	<!--  
 	<bean id="customer1" class="domain.Customer">
 		<property name="name" value="customer1"/>
 		<property name="middleName" value=""/>
@@ -79,16 +76,16 @@
 		<property name="make" value=""/>
 		<property name="isSuspicious" value="false"/>
 		<property name="isBanned" value="false"/>
-		<property name="userAccount" ref="customerAccount1"/>
+		<property name="userAccount" ref="userAccount2"/>
 		<property name="profiles">
 			<list>
-				<ref bean= "customer1Twitter"/>
-				<ref bean= "customer1Instagram"/>
+				<ref bean= "profile1"/>
+				<ref bean= "profile2"/>
 			</list>
 		</property>
-		<property name="messages">
+		<property name="boxes">
 			<list>
-				<ref bean="message1"/>
+				<ref bean="box1"/>
 			</list>
 		</property>
 		<property name="creditCards">
@@ -117,8 +114,6 @@
 		<property name="expirationYear" value="2022"/>
 		<property name="cvv" value="3510"/>
 	</bean>
-	
-	-->	
 	
 	<!-- Profile 
 	<bean id="profile1" class="domain.Profile">
