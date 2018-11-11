@@ -7,6 +7,8 @@ import java.util.Date;
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 
@@ -34,12 +36,14 @@ public class EducationalRecord extends DomainEntity {
 	}
 	@Past
 	@NotNull
+	@Temporal(TemporalType.DATE)
 	public Date getStudiesBeggining() {
 		return this.studiesBeggining;
 	}
 	public void setStudiesBeggining(final Date studiesBeggining) {
 		this.studiesBeggining = studiesBeggining;
 	}
+	@Temporal(TemporalType.DATE)
 	public Date getStudiesEnding() {
 		return this.studiesEnding;
 	}
