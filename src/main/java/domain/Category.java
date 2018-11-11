@@ -6,7 +6,7 @@ import java.util.Collection;
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
-import javax.validation.Valid;
+import javax.persistence.ManyToMany;
 
 import org.hibernate.validator.constraints.NotBlank;
 
@@ -33,11 +33,11 @@ public class Category extends DomainEntity {
 	private Collection<Category>	parents;
 
 
-	@Valid
+	@ManyToMany(mappedBy = "parents")
 	public Collection<Category> getChilds() {
 		return this.childs;
 	}
-	@Valid
+	@ManyToMany
 	public Collection<Category> getParents() {
 		return this.parents;
 	}

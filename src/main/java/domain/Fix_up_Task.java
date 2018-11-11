@@ -97,7 +97,6 @@ public class Fix_up_Task extends DomainEntity {
 	}
 	//Relationships:
 
-	@Valid
 	@ManyToMany(mappedBy = "fixUpTasks")
 	public Collection<Application> getAplications() {
 		return this.aplications;
@@ -107,7 +106,6 @@ public class Fix_up_Task extends DomainEntity {
 		this.aplications = aplications;
 	}
 
-	@Valid
 	@ManyToMany
 	public Collection<Complaint> getComplaints() {
 		return this.complaints;
@@ -150,7 +148,6 @@ public class Fix_up_Task extends DomainEntity {
 		this.category = category;
 	}
 
-	@Valid
 	@OneToMany(mappedBy = "fixUpTask")
 	public Collection<Phase> getPhases() {
 		return this.phases;

@@ -6,6 +6,8 @@ import java.util.Date;
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -27,6 +29,7 @@ public class Message extends DomainEntity {
 
 	//Getters and Setters
 	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
 	public Date getSendDate() {
 		return this.sendDate;
 	}

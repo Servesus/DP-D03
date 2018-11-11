@@ -6,6 +6,7 @@ import java.util.Date;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
@@ -22,7 +23,7 @@ public class EducationalRecord extends DomainEntity {
 	private Date				studiesEnding;
 	private String				institution;
 	private String				attachment;
-	private Collection<String>	comment;
+	private Collection<String>	comments;
 
 
 	@NotBlank
@@ -60,10 +61,11 @@ public class EducationalRecord extends DomainEntity {
 	public void setAttachment(final String attachment) {
 		this.attachment = attachment;
 	}
+	@ElementCollection
 	public Collection<String> getComment() {
-		return this.comment;
+		return this.comments;
 	}
 	public void setComment(final Collection<String> comment) {
-		this.comment = comment;
+		this.comments = comment;
 	}
 }

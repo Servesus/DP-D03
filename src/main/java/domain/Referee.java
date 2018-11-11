@@ -6,7 +6,7 @@ import java.util.Collection;
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
-import javax.validation.Valid;
+import javax.persistence.ManyToMany;
 
 @Entity
 @Access(AccessType.PROPERTY)
@@ -16,7 +16,7 @@ public class Referee extends Actor {
 	private Collection<Report>	reports;
 
 
-	@Valid
+	@ManyToMany(mappedBy = "referees")
 	public Collection<Report> getReports() {
 		return this.reports;
 	}

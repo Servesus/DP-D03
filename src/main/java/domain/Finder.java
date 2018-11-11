@@ -9,6 +9,8 @@ import javax.persistence.AccessType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -47,6 +49,7 @@ public class Finder extends DomainEntity {
 		this.rangeFinish = rangeFinishRange;
 	}
 	@NotNull
+	@Temporal(TemporalType.DATE)
 	public Date getDateStartRange() {
 		return this.dateStartRange;
 	}
@@ -55,6 +58,7 @@ public class Finder extends DomainEntity {
 		this.dateStartRange = dateStartRange;
 	}
 	@NotNull
+	@Temporal(TemporalType.DATE)
 	public Date getDateFinishRange() {
 		return this.dateFinishRange;
 	}
@@ -82,7 +86,6 @@ public class Finder extends DomainEntity {
 		this.configuration = configuration;
 	}
 
-	@Valid
 	@OneToMany(mappedBy = "finder")
 	public Collection<Fix_up_Task> getFixUpTask() {
 		return this.fixUpTask;
@@ -92,7 +95,6 @@ public class Finder extends DomainEntity {
 		this.fixUpTask = fixUpTask;
 	}
 
-	@Valid
 	@OneToMany
 	public Collection<Warranty> getWarranties() {
 		return this.warranties;
@@ -102,7 +104,6 @@ public class Finder extends DomainEntity {
 		this.warranties = warranties;
 	}
 
-	@Valid
 	@OneToMany
 	public Collection<Category> getCategories() {
 		return this.categories;

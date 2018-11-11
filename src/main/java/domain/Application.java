@@ -6,6 +6,7 @@ import java.util.Date;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
@@ -48,11 +49,11 @@ public class Application extends DomainEntity {
 	public String getStatus() {
 		return this.status;
 	}
-
+	@ElementCollection
 	public Collection<String> getCustomerComment() {
 		return this.customerComments;
 	}
-
+	@ElementCollection
 	public Collection<String> getHwComments() {
 		return this.hwComments;
 	}
@@ -92,8 +93,7 @@ public class Application extends DomainEntity {
 		this.handyWorker = handyWorker;
 	}
 
-	@Valid
-	@ManyToMany(mappedBy = "fixUpTask")
+	@ManyToMany
 	public Collection<Fix_up_Task> getFixUpTasks() {
 		return this.fixUpTasks;
 	}
