@@ -120,7 +120,7 @@
 	
 	-->	
 	
-	<!-- Profile -->
+	<!-- Profile 
 	<bean id="profile1" class="domain.Profile">
 		<property name="nick" value="Xtr3m3"/>
 		<property name="socialNetName" value="Xtr3me1998"/>
@@ -133,6 +133,7 @@
 		<property name="socialNetProfLink" value="https://www.twitch.tv/reventxz"/>
 		<property name="name" value="Antonio Pino"/>
 	</bean>
+	-->
 	<!--Phase 
 	<bean id="phase1" class="domain.Phase">
 		<property name="title" value="phase1" />
@@ -167,7 +168,7 @@
 	 	<property name="fixUpTask" ref="fixUpTask2"/>
 	</bean>
 	-->
-	<!-- Message -->
+	<!-- Message 
 	<bean id="message1" class="domain.Message">
 		<property name="sendDate" value="11/11/2018" />
 		<property name="recipient" ref="handyWorker1" />
@@ -176,7 +177,8 @@
 		<property name="body" value="body1"/>
 		<property name="priority" value="1"/>
 	</bean>
-	<!-- Handy Worker -->
+	-->
+	<!-- Handy Worker 
 	<bean id="handyWorker1" class="domain.HandyWorker">
 		<property name="name" value="handyWorker1" />
 		<property name="middlename" value="handyWorker1" />
@@ -188,14 +190,14 @@
 		<property name="make" value=""/>
 		<property name="isSuspicious" value="false"/>
 		<property name="isBanned" value="false"/>
-		<property name="userAccount" ref="handyWorkerAccount1"/>
+		<property name="userAccount" ref="useraccount4"/>
 		<property name="profiles" value=""/>
 		<property name="box">
 		<list>
-			<ref bean="box1"/>
-			<ref bean="box2"/>
-			<ref bean="box3"/>
-			<ref bean="box4"/>
+			<ref bean="inBox"/>
+			<ref bean="outBox"/>
+			<ref bean="trashBox"/>
+			<ref bean="spamBox"/>
 		</list>
 		</property>
 		<property name="applications">
@@ -218,14 +220,16 @@
 		</list>
 		</property>
 	</bean>
-	<!-- Configuration -->
+	-->
+	<!-- Configuration 
 	<bean id="configuration1" class="domain.Configuration">
 		<property name="maxResults" value="10"/>
 		<property name="maxTime" value="1"/>
 		<property name="lastUpdate" value="11/11/2018 10:00"/>
 		<property name="finder" value="finder1"/>
 	</bean>
-	<!-- Finder -->
+	-->
+	<!-- Finder 
 	<bean id="finder1" class="domain.Finder">
 		<property name="singleKeyWord"><null/></property>
 		<property name="rageStart"><null/></property>
@@ -237,11 +241,12 @@
 		<property name="warranties" value=""/>
 		<property name="categories" value=""/>
 	</bean>
-	<!-- BOXES -->
+	-->
+	<!-- BOXES 
 	
 	<bean id="box1" class="domain.Box">
 		<property name="name" value="Box1"/>
-		<property name="isSystem" ref="false"/>
+		<property name="isSystem" value="false"/>
 		<property name="parentBoxes">
 			<list>
 			</list>
@@ -252,15 +257,13 @@
 		</property>
 		<property name="messages">
 			<list>
-				<ref bean="message1"/>
-				<ref bean="message2"/>
 			</list>
 		</property>
 	</bean>
 	
 	<bean id="parentBox" class="domain.Box">
 		<property name="name" value="parentBox"/>
-		<property name="isSystem" ref="false"/>
+		<property name="isSystem" value="false"/>
 		<property name="parentBoxes">
 			<list>
 			</list>
@@ -278,7 +281,7 @@
 	
 	<bean id="childBox" class="domain.Box">
 		<property name="name" value="childBox"/>
-		<property name="isSystem" ref="false"/>
+		<property name="isSystem" value="false"/>
 		<property name="parentBoxes">
 			<list>
 				<ref bean="parentBox"/>
@@ -296,7 +299,7 @@
 	
 	<bean id="inBox" class="domain.Box">
 		<property name="name" value="inBox"/>
-		<property name="isSystem" ref="true"/>
+		<property name="isSystem" value="true"/>
 		<property name="parentBoxes">
 			<list>
 			</list>
@@ -313,7 +316,7 @@
 	
 	<bean id="outBox" class="domain.Box">
 		<property name="name" value="outBox"/>
-		<property name="isSystem" ref="true"/>
+		<property name="isSystem" value="true"/>
 		<property name="parentBoxes">
 			<list>
 			</list>
@@ -330,7 +333,7 @@
 	
 	<bean id="spamBox" class="domain.Box">
 		<property name="name" value="spamBox"/>
-		<property name="isSystem" ref="true"/>
+		<property name="isSystem" value="true"/>
 		<property name="parentBoxes">
 			<list>
 			</list>
@@ -347,7 +350,7 @@
 	
 	<bean id="trashBox" class="domain.Box">
 		<property name="name" value="trashBox"/>
-		<property name="isSystem" ref="true"/>
+		<property name="isSystem" value="true"/>
 		<property name="parentBoxes">
 			<list>
 			</list>
@@ -361,11 +364,11 @@
 			</list>
 		</property>
 	</bean>
-	
+	-->
 	<!-- CURRICULAS -->
 	
 	<bean id="curricula1" class="domain.Curricula">
-		<property name="ticker" value="e63ty6-111118"/>
+		<property name="ticker" value="111118-e63ty6"/>
 		<property name="personalRecord" ref="personalRecord1"/>
 		<property name="educationalRecord">
 			<list>
@@ -391,7 +394,7 @@
 	</bean>
 	
 	<bean id="curricula2" class="domain.Curricula">
-		<property name="ticker" value="j8t643-103018"/>
+		<property name="ticker" value="103018-j8t643"/>
 		<property name="personalRecord" ref="personalRecord2"/>
 		<property name="educationalRecord">
 			<list>
@@ -444,7 +447,7 @@
 		<property name="studiesEnding" value="06/20/2018"/>
 		<property name="institution" value="Sevilla University"/>
 		<property name="attachment" value="https://www.pinterest.es/pin/3/"/>
-		<property name="comment">
+		<property name="comments">
 			<list>
 			</list>
 		</property>
@@ -453,10 +456,10 @@
 	<bean id="educationalRecord2" class="domain.EducationalRecord">
 		<property name="diplomasTitle" value="Ingenieria Software"/>
 		<property name="studiesBeggining" value="09/20/2016"/>
-		<property name="studiesEnding" value=""/>
+		<property name="studiesEnding"><null/></property>
 		<property name="institution" value="Sevilla University"/>
 		<property name="attachment" value="https://www.pinterest.es/pin/4/"/>
-		<property name="comment">
+		<property name="comments">
 			<list>
 			</list>
 		</property>
@@ -469,7 +472,7 @@
 		<property name="email" value="pepemartin@gmail.com"/>
 		<property name="phone" value="666445566"/>
 		<property name="linkedInProfile" value="https://www.linkedin.com/jobs/view/3/"/>
-		<property name="comment">
+		<property name="comments">
 			<list>
 			</list>
 		</property>
@@ -480,7 +483,7 @@
 		<property name="email" value="javiermartin@gmail.com"/>
 		<property name="phone" value="666555566"/>
 		<property name="linkedInProfile" value="https://www.linkedin.com/jobs/view/4/"/>
-		<property name="comment">
+		<property name="comments">
 			<list>
 			</list>
 		</property>
@@ -517,7 +520,7 @@
 	<bean id="miscRecord1" class="domain.MiscRecord">
 		<property name="title" value="Titulo generico 1"/>
 		<property name="attachment" value="https://www.pinterest.es/pin/7/"/>
-		<property name="comment">
+		<property name="comments">
 			<list>
 			</list>
 		</property>
@@ -526,9 +529,10 @@
 	<bean id="miscRecord2" class="domain.MiscRecord">
 		<property name="title" value="Titulo generico 2"/>
 		<property name="attachment" value="https://www.pinterest.es/pin/8/"/>
-		<property name="comment">
+		<property name="comments">
 			<list>
 			</list>
 		</property>
 	</bean>
+	
 </beans>

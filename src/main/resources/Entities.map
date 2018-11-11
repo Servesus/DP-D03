@@ -1,4 +1,14 @@
 #./src/main/resources/Entities.map
-#Sun Nov 11 16:35:00 CET 2018
-profile2=4
-profile1=3
+#Sun Nov 11 20:55:44 CET 2018
+endorserRecord2=17
+endorserRecord1=16
+curricula2=20
+curricula1=13
+miscRecord2=23
+miscRecord1=18
+personalRecord2=21
+personalRecord1=14
+professionalRecord2=24
+professionalRecord1=19
+educationalRecord2=22
+educationalRecord1=15
