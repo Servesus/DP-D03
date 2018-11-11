@@ -50,7 +50,7 @@ public class Application extends DomainEntity {
 		return this.status;
 	}
 	@ElementCollection
-	public Collection<String> getCustomerComment() {
+	public Collection<String> getCustomerComments() {
 		return this.customerComments;
 	}
 	@ElementCollection

@@ -66,7 +66,7 @@ public class CreditCard extends Customer {
 		this.month = month;
 	}
 
-	public void setExpiratioYear(final int expirationYear) {
+	public void setExpirationYear(final int expirationYear) {
 		this.expirationYear = expirationYear;
 	}
 

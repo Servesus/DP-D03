@@ -75,11 +75,11 @@ public abstract class Actor extends DomainEntity {
 		return this.make;
 	}
 
-	public boolean isSuspicious() {
+	public boolean getIsSuspicious() {
 		return this.isSuspicious;
 	}
 
-	public boolean isBanned() {
+	public boolean getIsBanned() {
 		return this.isBanned;
 	}
 
@@ -139,7 +139,7 @@ public abstract class Actor extends DomainEntity {
 		return this.profiles;
 	}
 
-	public void setProfile(final Collection<Profile> profiles) {
+	public void setProfiles(final Collection<Profile> profiles) {
 		this.profiles = profiles;
 	}
 
@@ -148,8 +148,8 @@ public abstract class Actor extends DomainEntity {
 		return this.box;
 	}
 
-	public void setBoxes(final Collection<Box> boxes) {
-		this.box = boxes;
+	public void setBox(final Collection<Box> box) {
+		this.box = box;
 	}
 
 }
