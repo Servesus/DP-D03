@@ -6,6 +6,7 @@ import java.util.Collection;
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
 
 import org.hibernate.validator.constraints.NotBlank;
 
@@ -34,6 +35,7 @@ public class Box extends DomainEntity {
 		this.isSystem = isSystem;
 	}
 
+	@ManyToMany
 	public Collection<Box> getParentBoxes() {
 		return this.parentBoxes;
 	}
@@ -41,13 +43,14 @@ public class Box extends DomainEntity {
 		this.parentBoxes = parentBoxes;
 	}
 
+	@ManyToMany
 	public Collection<Box> getChildBoxes() {
 		return this.childBoxes;
 	}
 	public void setChildBoxes(final Collection<Box> childBoxes) {
 		this.childBoxes = childBoxes;
 	}
-
+	@ManyToMany
 	public Collection<Message> getMessages() {
 		return this.messages;
 	}

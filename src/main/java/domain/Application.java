@@ -40,7 +40,7 @@ public class Application extends DomainEntity {
 	public double getPrice() {
 		return this.price;
 	}
-
+	@ElementCollection
 	public Collection<String> getComments() {
 		return this.comments;
 	}
@@ -50,7 +50,7 @@ public class Application extends DomainEntity {
 		return this.status;
 	}
 	@ElementCollection
-	public Collection<String> getCustomerComment() {
+	public Collection<String> getCustomerComments() {
 		return this.customerComments;
 	}
 	@ElementCollection

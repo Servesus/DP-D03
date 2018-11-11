@@ -41,7 +41,7 @@ public class Customer extends Actor {
 		return this.fixUpTasks;
 	}
 
-	public void setFixUpTask(final Collection<Fix_up_Task> fixUpTasks) {
+	public void setFixUpTasks(final Collection<Fix_up_Task> fixUpTasks) {
 		this.fixUpTasks = fixUpTasks;
 	}
 
