@@ -634,4 +634,117 @@
 		<property name="customerComment" value="customerComment"/>
 	</bean>
 	
+	<!-- COMPLAINT -->
+	
+	<bean id="complaint1" class="domain.Complaint">
+		<property name="ticker" value="Titulo1"/>
+		<property name="moment" value="2018/11/11 8:00"/>
+		<property name="description" value="esta es la descripcion de complaint1" />
+		<property name="attachment">
+			<list>
+				<value>"https://www.pinterest.es/pin/8/"</value>
+			</list>
+			</property>
+		<property name="customer" ref="customer1"/>
+		<property name="reports">
+			<list>
+				<ref bean="report1"/>
+			</list>
+		</property>
+		<property name="fix_up_tasks">
+			<list>
+				<ref bean="fix_up_task1"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="complaint2" class="domain.Complaint">
+		<property name="ticker" value="Titulo2"/>
+		<property name="moment" value="2018/11/11 9:00"/>
+		<property name="description" value="esta es la descripcion de complaint2" />
+		<property name="attachment">
+			<list>
+				<value>"https://www.pinterest.es/pin/9/"</value>
+			</list>
+			</property>
+		<property name="customer" ref="customer1"/>
+		<property name="reports">
+			<list>
+				<ref bean="report1"/>
+			</list>
+		</property>
+		<property name="fix_up_tasks">
+			<list>
+				<ref bean="fix_up_task1"/>
+			</list>
+		</property>
+	</bean>
+	
+	<!--WARRANTY-->
+	
+	<bean id="warranty1" class="domain.Warranty">
+		<property name="title" value="Garantia Monitor LG"/>
+		<property name="terms" value="Si se ha producido despues de la fecha de compra esta en garantia durante 2 años"/>
+		<property name="applicableLaws" value="Todas estas leyes figuran en el decreto nº25" />
+		<property name="isFinal" value="false"/>
+	</bean>
+	<bean id="warranty2" class="domain.Warranty">
+		<property name="title" value="Garantia Televisor LG"/>
+		<property name="terms" value="Si se ha producido despues de la fecha de compra esta en garantia durante 2 años"/>
+		<property name="applicableLaws" value="Todas estas leyes figuran en el decreto nº32" />
+		<property name="isFinal" value="true"/>
+	</bean>
+	
+	<!--FIX_UP_TASK-->
+	
+	<bean id="fix_up_task1" class="domain.Fix_up_Task">
+		<property name="ticker" value="ticker1"/>
+		<property name="starDate" value="2018/11/11 8:00"/>
+		<property name="description" value="descripcion fix_up_task1" />
+		<property name="address" value="https://monday.com/"/>
+		<property name="maxPrice" value="2500"/>
+		<property name="estimatedDate" value="2018/12/11 8:00"/>
+		<property name="finder" ref="finder1"/>
+		<property name="category" ref="category1"/>
+		<property name="warranty" ref="warranty1"/>
+		<property name="aplications">
+			<list>
+				<ref bean="application1"/>
+			</list>
+		</property>
+		<property name="complaints">
+			<list>
+				<ref bean="complaint1"/>
+			</list>
+		</property><property name="phases">
+			<list>
+				<ref bean="phase1"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="fix_up_task2" class="domain.Fix_up_Task">
+		<property name="ticker" value="ticker2"/>
+		<property name="starDate" value="2018/11/11 9:00"/>
+		<property name="description" value="descripcion fix_up_task2" />
+		<property name="address" value="https://monday.com/"/>
+		<property name="maxPrice" value="2500"/>
+		<property name="estimatedDate" value="2018/12/11 15:00"/>
+		<property name="finder" ref="finder1"/>
+		<property name="category" ref="category1"/>
+		<property name="warranty" ref="warranty1"/>
+		<property name="aplications">
+			<list>
+				<ref bean="application1"/>
+			</list>
+		</property>
+		<property name="complaints">
+			<list>
+				<ref bean="complaint1"/>
+			</list>
+		</property><property name="phases">
+			<list>
+				<ref bean="phase1"/>
+			</list>
+		</property>
+	</bean>
 </beans>

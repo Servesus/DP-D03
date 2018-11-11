@@ -1,9 +1,14 @@
 #./src/main/resources/Entities.map
-#Sun Nov 11 20:31:15 CET 2018
-spamBox=13
-trashBox=14
-box1=8
-outBox=12
-inBox=11
-parentBox=9
-childBox=10
+#Sun Nov 11 20:55:44 CET 2018
+endorserRecord2=17
+endorserRecord1=16
+curricula2=20
+curricula1=13
+miscRecord2=23
+miscRecord1=18
+personalRecord2=21
+personalRecord1=14
+professionalRecord2=24
+professionalRecord1=19
+educationalRecord2=22
+educationalRecord1=15
