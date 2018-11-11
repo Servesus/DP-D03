@@ -46,48 +46,32 @@ public class Curricula extends DomainEntity {
 	public void setPersonalRecord(final PersonalRecord personalRecord) {
 		this.personalRecord = personalRecord;
 	}
-<<<<<<< HEAD
 
-=======
-	@Valid
 	@OneToMany(cascade = CascadeType.ALL)
->>>>>>> origin/manuercaximba
 	public Collection<EducationalRecord> getEducationalRecord() {
 		return this.educationalRecord;
 	}
 	public void setEducationalRecord(final Collection<EducationalRecord> educationalRecord) {
 		this.educationalRecord = educationalRecord;
 	}
-<<<<<<< HEAD
 
-=======
-	@Valid
 	@OneToMany(cascade = CascadeType.ALL)
->>>>>>> origin/manuercaximba
 	public Collection<ProfessionalRecord> getProfessionalRecord() {
 		return this.professionalRecord;
 	}
 	public void setProfessionalRecord(final Collection<ProfessionalRecord> professionalRecord) {
 		this.professionalRecord = professionalRecord;
 	}
-<<<<<<< HEAD
 
-=======
-	@Valid
 	@OneToMany(cascade = CascadeType.ALL)
->>>>>>> origin/manuercaximba
 	public Collection<EndorserRecord> getEndorserRecord() {
 		return this.endorserRecord;
 	}
 	public void setEndorserRecord(final Collection<EndorserRecord> endorserRecord) {
 		this.endorserRecord = endorserRecord;
 	}
-<<<<<<< HEAD
 
-=======
-	@Valid
 	@OneToMany(cascade = CascadeType.ALL)
->>>>>>> origin/manuercaximba
 	public Collection<MiscRecord> getMiscRecord() {
 		return this.miscRecord;
 	}
