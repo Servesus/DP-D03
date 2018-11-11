@@ -133,4 +133,109 @@
 		<property name="socialNetProfLink" value="https://www.twitch.tv/reventxz"/>
 		<property name="name" value="Antonio Pino"/>
 	</bean>
+	
+	<!-- Administrator -->
+	<bean id="admin1" class = "domain.Administrator">
+		<property name="name" value="admin1"/>
+		<property name="middleName" value="admin1"/>
+		<property name="surname" value="admin1"/>
+		<property name="photo" value="www.tumblr.com/photo"/>
+		<property name="email" value="admin1@gmail.com"/>
+		<property name="phoneNumber" value="684144460"/>
+		<property name="address" value = "Torreperojil 4"/>
+		<property name="make" value=""/>
+		<property name="isSuspicious" value= "False"/>
+		<property name="isBanned" value = "False"/>
+		<property name="userAccount" ref="admin1"/>
+		<property name="profiles">
+			<list>
+				<ref bean = "profile1"/>
+			</list>
+		</property>	
+		<property name="box">
+			<list>
+				<ref bean = "box1"/>
+				<ref bean = "box2"/>
+			</list>
+		</property>
+		<property name="categorys">
+			<list>
+				<ref bean = "category"/>
+				<ref bean = "category1"/>
+			</list>
+		</property>	
+			<property name="configurations">
+			<list>
+				<ref bean = "configuration1"/>
+				<ref bean = "configuration2"/>
+			</list>
+		</property>	
+	</bean>
+	
+	<!-- Category -->
+	<bean id="category" class = "domain.Category">
+		<property name="name" value="category"/>
+		<property name="parents">
+			<list>
+				
+			</list>
+		</property>
+		<property name="childs">
+			<list>
+				<ref bean = "category1"/>
+			</list>
+		</property>	
+	</bean>
+	
+	<!-- Referee -->
+	<bean id="referee1" class = "domain.Referee">
+		<property name="name" value="referee1"/>
+		<property name="middleName" value="referee1"/>
+		<property name="surname" value="referee1"/>
+		<property name="photo" value="www.tumblr.com/photo"/>
+		<property name="email" value="referee@gmail.com"/>
+		<property name="phoneNumber" value="684144461"/>
+		<property name="address" value = "Roma 4"/>
+		<property name="make" value=""/>
+		<property name="isSuspicious" value= "False"/>
+		<property name="isBanned" value = "False"/>
+		<property name="userAccount" ref="referee1"/>
+		<property name="reports">
+			<list>
+				<ref bean = "report1"/>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- Report -->
+	<bean id="report1" class="domain.Report">
+		<property name="moment" value="11/11/2018 20:20"/>
+		<property name="description" value="referee1"/>
+		<property name="attachment" value="referee1"/>
+		<property name="isFinal" value="True"/>
+		<property name="notes">
+			<list>
+				<ref bean = "note1"/>
+			</list>
+		</property>
+		<property name="complaint">
+			<list>
+				<ref bean = "complaint1"/>
+			</list>
+		</property>
+		<property name="referees">
+			<list>
+				<ref bean = "referee1"/>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- Note -->
+	<bean id="note1" class="domain.Note">
+		<property name="author" value="author"/>
+		<property name="moment" value="11/11/2018 20:46"/>
+		<property name="authorComment" value="authorComment"/>
+		<property name="hwComment" value="hwComment"/>
+		<property name="customerComment" value="customerComment"/>
+	</bean>
 </beans>
