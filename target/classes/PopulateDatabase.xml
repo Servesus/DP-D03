@@ -67,15 +67,7 @@
 	</bean>
 	-->
 	<!-- Other domain beans come here -->	
-	<bean id="message1" class="domain.Message">
-		<property name="sendDate" value="08/11/2018"/>
-		<property name="recipient" ref="Actor2"/>
-		<property name="sender" ref="Actor1"/>
-		<property name="subject" value="subject1"/>
-		<property name="body" value="body1"/>
-		<property name="priotity" value="1"/>
-	</bean>
-	<!--  	
+	<!--  
 	<bean id="customer1" class="domain.Customer">
 		<property name="name" value="customer1"/>
 		<property name="middleName" value=""/>
@@ -126,9 +118,9 @@
 		<property name="cvv" value="3510"/>
 	</bean>
 	
-	-->
+	-->	
 	
-	<!-- Profile -->	
+	<!-- Profile -->
 	<bean id="profile1" class="domain.Profile">
 		<property name="nick" value="Xtr3m3"/>
 		<property name="socialNetName" value="Xtr3me1998"/>
