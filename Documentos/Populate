@@ -1,0 +1,37 @@
+1º userAccount -> 4
+2º complaint -> 2
+3º fix_up_task -> 2
+4º warranty ->
+5º customer-> 1
+6º creditCard ->1
+7º profile->2
+8º phase->4
+9º message->1
+10º handyWorker->1
+11º configuration->1
+12º finder->1
+13º box->7
+14º curricula->2
+15º personalRecord->2
+16º educationalRecord->2
+17º endorserRecord->2
+18º professionalRecord->2
+19º miscRecord->2
+20º administrator->1
+21º category->1
+22º referee->1
+23º report->1
+24º note->1
+25º complaint->2
+26º warranty->2
+27º fixUpTask->2
+28º application->1
+
+
+
+
+NOTAS: 
+1 CAMBIAR EN UML NUMERO DE TARJETA DE CREDITO A STRING
+2 CAMBIAR NOMBRE DE LA CLASE FIX_UP_TASK POR fixUpTask
+3 cambiar el status de application por int y cambiar anotacion en uml de dominio
+4 cambiar el attachment de complaint
