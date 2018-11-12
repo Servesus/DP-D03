@@ -15,7 +15,7 @@ public class CreditCard extends Customer {
 
 	private String	holderName;
 	private String	brandName;
-	private int		number;
+	private String	number;
 	private int		month;
 	private int		expirationYear;
 	private int		cvv;
@@ -32,7 +32,7 @@ public class CreditCard extends Customer {
 	}
 
 	@CreditCardNumber
-	public int getNumber() {
+	public String getNumber() {
 		return this.number;
 	}
 
@@ -58,7 +58,7 @@ public class CreditCard extends Customer {
 		this.brandName = brandName;
 	}
 
-	public void setNumber(final int number) {
+	public void setNumber(final String number) {
 		this.number = number;
 	}
 

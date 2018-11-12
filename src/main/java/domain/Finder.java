@@ -33,20 +33,20 @@ public class Finder extends DomainEntity {
 		this.singleKeyWord = singleKeyWord;
 	}
 
-	public Integer getRangeStartRange() {
+	public Integer getRangeStart() {
 		return this.rangeStart;
 	}
 
-	public void setRangeStartRange(final Integer rangeStartRange) {
-		this.rangeStart = rangeStartRange;
+	public void setRangeStart(final Integer rangeStart) {
+		this.rangeStart = rangeStart;
 	}
 
-	public Integer getRangeFinishRange() {
+	public Integer getRangeFinish() {
 		return this.rangeFinish;
 	}
 
-	public void setRangeFinishRange(final Integer rangeFinishRange) {
-		this.rangeFinish = rangeFinishRange;
+	public void setRangeFinish(final Integer rangeFinish) {
+		this.rangeFinish = rangeFinish;
 	}
 	@NotNull
 	@Temporal(TemporalType.DATE)

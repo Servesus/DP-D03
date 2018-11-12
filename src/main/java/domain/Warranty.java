@@ -44,11 +44,11 @@ public class Warranty extends DomainEntity {
 		this.applicableLaws = applicableLaws;
 	}
 
-	public boolean isFinal() {
+	public boolean getIsFinal() {
 		return this.isFinal;
 	}
 
-	public void setFinal(final boolean isFinal) {
+	public void setIsFinal(final boolean isFinal) {
 		this.isFinal = isFinal;
 	}
 

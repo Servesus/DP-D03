@@ -24,7 +24,7 @@ public class Application extends DomainEntity {
 	private Date					moment;
 	private double					price;
 	private Collection<String>		comments;
-	private String					status;
+	private int						status;
 	private Collection<String>		customerComments;
 	private Collection<String>		hwComments;
 	private HandyWorker				handyWorker;
@@ -46,7 +46,7 @@ public class Application extends DomainEntity {
 	}
 
 	@NotBlank
-	public String getStatus() {
+	public int getStatus() {
 		return this.status;
 	}
 	@ElementCollection
@@ -70,7 +70,7 @@ public class Application extends DomainEntity {
 		this.comments = comments;
 	}
 
-	public void setStatus(final String status) {
+	public void setStatus(final int status) {
 		this.status = status;
 	}
 

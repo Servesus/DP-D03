@@ -7,7 +7,6 @@ import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
-import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
@@ -39,7 +38,6 @@ public class EndorserRecord extends DomainEntity {
 		this.email = email;
 	}
 	@NotBlank
-	@Pattern(regexp = "^(+[1-9]\\d{0,2}([1-9]\\d{0,2})\\d{4,})$|^(+[1-9]\\d{0,2} \\d{4,})$|^(\\d{4,})$")
 	public String getPhone() {
 		return this.phone;
 	}

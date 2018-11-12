@@ -41,10 +41,6 @@ public class Note extends DomainEntity {
 		return this.authorComment;
 	}
 
-	public String getHWComment() {
-		return this.hwComment;
-	}
-
 	public String getCustomerComment() {
 		return this.customerComment;
 	}
@@ -61,11 +57,15 @@ public class Note extends DomainEntity {
 		this.authorComment = authorComment;
 	}
 
-	public void setHWComment(final String hwComment) {
-		this.hwComment = hwComment;
-	}
-
 	public void setCustomerComment(final String customerComment) {
 		this.customerComment = customerComment;
+	}
+
+	public String getHwComment() {
+		return this.hwComment;
+	}
+
+	public void setHwComment(final String hwComment) {
+		this.hwComment = hwComment;
 	}
 }

@@ -26,7 +26,7 @@ public class Complaint extends DomainEntity {
 	private String					ticker;
 	private Date					moment;
 	private String					description;
-	private Collection<String>		attchment;
+	private Collection<String>		attachment;
 
 	//Relationships:
 	private Customer				customer;
@@ -64,12 +64,12 @@ public class Complaint extends DomainEntity {
 		this.description = description;
 	}
 	@ElementCollection
-	public Collection<String> getAttchment() {
-		return this.attchment;
+	public Collection<String> getAttachment() {
+		return this.attachment;
 	}
 
-	public void setAttchment(final Collection<String> attchment) {
-		this.attchment = attchment;
+	public void setAttachment(final Collection<String> attachment) {
+		this.attachment = attachment;
 	}
 
 	//Relationships:
