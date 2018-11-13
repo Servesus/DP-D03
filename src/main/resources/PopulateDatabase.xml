@@ -111,10 +111,7 @@
 		<property name="expirationYear" value="2022"/>
 		<property name="cvv" value="350"/>
 	</bean>
-<<<<<<< HEAD
 	
-=======
->>>>>>> 0f6bf72783fa2cf331b4cf1eecc584982d779c64
 	<!-- Profile -->
 	<bean id="profile1" class="domain.Profile">
 		<property name="nick" value="Xtr3m3"/>
@@ -128,10 +125,7 @@
 		<property name="socialNetProfLink" value="https://www.twitch.tv/reventxz"/>
 		<property name="name" value="Antonio Pino"/>
 	</bean>
-<<<<<<< HEAD
-	
-=======
->>>>>>> 0f6bf72783fa2cf331b4cf1eecc584982d779c64
+
 	<!--Phase --> 
 	<bean id="phase1" class="domain.Phase">
 		<property name="title" value="phase1" />
@@ -165,10 +159,7 @@
 		<property name="number" value="2" />
 	 	<property name="fixUpTask" ref="fixUpTask1"/>
 	</bean>
-<<<<<<< HEAD
-	
-=======
->>>>>>> 0f6bf72783fa2cf331b4cf1eecc584982d779c64
+
 	<!-- Message --> 
 	<bean id="message1" class="domain.Message">
 		<property name="sendDate" value="11/11/2018" />
@@ -178,14 +169,10 @@
 		<property name="body" value="body1"/>
 		<property name="priority" value="1"/>
 	</bean>
-<<<<<<< HEAD
+
 
 	<!-- Handy Worker --> 
 	<bean id="handyWorker1" class="domain.HandyWorker">
-=======
-	<!-- Handy Worker --> 
-		<bean id="handyWorker1" class="domain.HandyWorker">
->>>>>>> 0f6bf72783fa2cf331b4cf1eecc584982d779c64
 		<property name="name" value="handyWorker1" />
 		<property name="middleName" value="handyWorker1" />
 		<property name="surname" value="handyWorker1"/>
@@ -226,24 +213,15 @@
 		</list>
 		</property>
 	</bean>
-<<<<<<< HEAD
 	
 	<!-- Configuration --> 
-=======
-	<!-- Configuration -->
->>>>>>> 0f6bf72783fa2cf331b4cf1eecc584982d779c64
 	<bean id="configuration1" class="domain.Configuration">
 		<property name="maxResults" value="10"/>
 		<property name="maxTime" value="1"/>
 		<property name="lastUpdate" value="11/11/2018 10:00"/>
 		<property name="finder" ref="finder1"/>
-	</bean>
-	
-<<<<<<< HEAD
-	<!-- Finder -->
-=======
+	</bean>	
 	<!-- Finder --> 
->>>>>>> 0f6bf72783fa2cf331b4cf1eecc584982d779c64
 	<bean id="finder1" class="domain.Finder">
 		<property name="singleKeyWord"><null/></property>
 		<property name="rangeStart"><null/></property>
@@ -267,11 +245,8 @@
 			</list>
 		</property>
 	</bean>
-<<<<<<< HEAD
 	
 	<!-- BOXES -->
-=======
->>>>>>> 0f6bf72783fa2cf331b4cf1eecc584982d779c64
 	
 	<!-- Box -->
 	<bean id="box1" class="domain.Box">
@@ -445,10 +420,7 @@
 			</list>
 		</property>
 	</bean>
-<<<<<<< HEAD
 
-=======
->>>>>>> 0f6bf72783fa2cf331b4cf1eecc584982d779c64
 	<!-- CURRICULAS -->
 	<bean id="curricula1" class="domain.Curricula">
 		<property name="ticker" value="111118-e63ty6"/>
