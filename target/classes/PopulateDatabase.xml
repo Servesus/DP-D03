@@ -177,9 +177,9 @@
 		</property>
 	</bean>
 	
-	<bean id="customerAccount4" class="security.UserAccount">
-		<property name="username" value="customer4" />
-		<property name="password" value="customer4Pass" />
+	<bean id="customerAccount5" class="security.UserAccount">
+		<property name="username" value="customer5" />
+		<property name="password" value="customer5Pass" />
 		<property name="authorities">
 			<list>
 				<bean class="security.Authority">
@@ -246,6 +246,7 @@
 		</property>
 		<property name="boxes">
 			<list>
+			<ref bean="box2"/>
 			</list>
 		</property>
 		<property name="creditCards">
@@ -347,6 +348,8 @@
 		<property name="userAccount" ref="customerAccount5"/>
 		<property name="profiles">
 			<list>
+			<ref bean="profile1"/>
+			<ref bean="profile4"/>
 			</list>
 		</property>
 		<property name="boxes">
@@ -507,14 +510,7 @@
 		<property name="number" value="1" />
 	 	<property name="fixUpTask" ref="fixUpTask5"/>
 	</bean>
-	<bean id="phase9" class="domain.Phase">
-		<property name="title" value="phase1" />
-		<property name="description" value="description1" />
-		<property name="startMoment" value="12/11/2018" />
-		<property name="finishMoment" value="13/11/2018" />
-		<property name="number" value="1" />
-	 	<property name="fixUpTask" ref="fixUpTask6"/>
-	</bean>
+	
 	<!-- Message --> 
 	<bean id="message1" class="domain.Message">
 		<property name="sendDate" value="11/11/2018" />
@@ -539,11 +535,12 @@
 		<property name="userAccount" ref="userAccount4"/>
 		<property name="profiles">
 			<list>
+			<ref bean="profile2"/>
 			</list>
 		</property>
 		<property name="boxes">
 		<list>
-			<ref bean="box2"/>
+			<ref bean="box3"/>
 		</list>
 		</property>
 		<property name="applications">
@@ -580,11 +577,11 @@
 		<property name="userAccount" ref="userAccount5"/>
 		<property name="profiles">
 			<list>
-				<ref bean="box5"/>
 			</list>
 		</property>
 		<property name="boxes">
 		<list>
+		<ref bean="box4"/>
 		</list>
 		</property>
 		<property name="applications">
@@ -598,7 +595,6 @@
 			<ref bean="phase6"/>
 			<ref bean="phase7"/>
 			<ref bean="phase8"/>
-			<ref bean="phase9"/>
 		</list>
 		</property>
 		<property name="curricula" ref="curricula2"/>
@@ -626,7 +622,7 @@
 		</property>
 		<property name="boxes">
 		<list>
-			<ref bean="box6"/>
+			<ref bean="box5"/>
 		</list>
 		</property>
 		<property name="applications">
@@ -664,7 +660,7 @@
 		</property>
 		<property name="boxes">
 		<list>
-			<ref bean="box7"/>
+			<ref bean="box6"/>
 		</list>
 		</property>
 		<property name="applications">
@@ -701,7 +697,6 @@
 		</property>
 		<property name="boxes">
 		<list>
-			<ref bean="box8"/>
 		</list>
 		</property>
 		<property name="applications">
@@ -1333,7 +1328,7 @@
 		<property name="surname" value="admin1"/>
 		<property name="photo" value="http://www.tumblr.com/photo"/>
 		<property name="email" value="admin1@gmail.com"/>
-		<property name="phoneNumber" value="684144460"/>
+		<property name="phoneNumber" value="684143460"/>
 		<property name="address" value = "Torreperojil 4"/>
 		<property name="make" value=""/>
 		<property name="isSuspicious" value= "false"/>
@@ -1341,11 +1336,12 @@
 		<property name="userAccount" ref="userAccount1"/>
 		<property name="profiles">
 			<list>
+			<ref bean="profile3"/>
 			</list>
 		</property>	
 		<property name="boxes">
 			<list>
-				<ref bean = "box3"/>
+				<ref bean="box7"/>
 			</list>
 		</property>
 		<property name="categories">
@@ -1395,12 +1391,17 @@
 		<property name="surname" value="referee1"/>
 		<property name="photo" value="http://www.tumblr.com/photo"/>
 		<property name="email" value="referee@gmail.com"/>
-		<property name="phoneNumber" value="684144461"/>
+		<property name="phoneNumber" value="684123461"/>
 		<property name="address" value = "Roma 4"/>
 		<property name="make" value=""/>
 		<property name="isSuspicious" value= "false"/>
 		<property name="isBanned" value = "false"/>
 		<property name="userAccount" ref="userAccount3"/>
+		<property name="profiles">
+			<list>
+				<ref bean="profile5"/>
+			</list>
+		</property>
 		<property name="reports">
 			<list>
 				<ref bean = "report1"/>
@@ -1408,7 +1409,7 @@
 		</property>
 		<property name="boxes">
 			<list>
-				<ref bean="box4"/>
+				<ref bean="box8"/>
 			</list>
 		</property>
 	</bean>
@@ -1418,12 +1419,16 @@
 		<property name="surname" value="referee2"/>
 		<property name="photo" value="http://www.tumblr.com/photo"/>
 		<property name="email" value="referee2@gmail.com"/>
-		<property name="phoneNumber" value="684144462"/>
+		<property name="phoneNumber" value="684123462"/>
 		<property name="address" value = "Roma 5"/>
 		<property name="make" value=""/>
 		<property name="isSuspicious" value= "false"/>
 		<property name="isBanned" value = "false"/>
 		<property name="userAccount" ref="userAccount9"/>
+		<property name="profiles">
+			<list>
+			</list>
+		</property>
 		<property name="reports">
 			<list>
 				<ref bean = "report1"/>
@@ -1431,7 +1436,6 @@
 		</property>
 		<property name="boxes">
 			<list>
-				<ref bean="box9"/>
 			</list>
 		</property>
 	</bean>
@@ -1448,6 +1452,10 @@
 		<property name="isSuspicious" value= "false"/>
 		<property name="isBanned" value = "false"/>
 		<property name="userAccount" ref="userAccount10"/>
+		<property name="profiles">
+			<list>
+			</list>
+		</property>
 		<property name="reports">
 			<list>
 				<ref bean = "report1"/>
@@ -1455,7 +1463,6 @@
 		</property>
 		<property name="boxes">
 			<list>
-				<ref bean="box10"/>
 			</list>
 		</property>
 	</bean>
@@ -1466,12 +1473,16 @@
 		<property name="surname" value="referee4"/>
 		<property name="photo" value="http://www.tumblr.com/photo"/>
 		<property name="email" value="referee4@gmail.com"/>
-		<property name="phoneNumber" value="684144464"/>
+		<property name="phoneNumber" value="684195464"/>
 		<property name="address" value = "Creus 9"/>
 		<property name="make" value=""/>
 		<property name="isSuspicious" value= "false"/>
 		<property name="isBanned" value = "false"/>
 		<property name="userAccount" ref="userAccount11"/>
+		<property name="profiles">
+			<list>
+			</list>
+		</property>
 		<property name="reports">
 			<list>
 				<ref bean = "report1"/>
@@ -1479,7 +1490,6 @@
 		</property>
 		<property name="boxes">
 			<list>
-				<ref bean="box11"/>
 			</list>
 		</property>
 	</bean>
@@ -1826,7 +1836,7 @@
 			</list>
 		</property>
 	</bean>
-	<bean id="fixUpTask3" class="domain.FixUpTask">
+	<bean id="fixUpTask4" class="domain.FixUpTask">
 		<property name="ticker" value="132138-f63xs6"/>
 		<property name="startDate" value="2018/12/11 12:00"/>
 		<property name="description" value="descripcion fix_up_task3" />
@@ -1850,37 +1860,13 @@
 			</list>
 		</property>
 	</bean>
-	<bean id="fixUpTask4" class="domain.FixUpTask">
+	<bean id="fixUpTask5" class="domain.FixUpTask">
 		<property name="ticker" value="123898-g63xx6"/>
 		<property name="startDate" value="2018/12/11 15:00"/>
-		<property name="description" value="descripcion fix_up_task4" />
+		<property name="description" value="descripcion fix_up_task5" />
 		<property name="address" value="https://monday.com/"/>
 		<property name="maxPrice" value="2000"/>
 		<property name="estimatedDate" value="2018/12/11 16:00"/>
-		<property name="category" ref="category1"/>
-		<property name="warranty" ref="warranty4"/>
-		<property name="applications">
-			<list>
-				<ref bean="application1"/>
-			</list>
-		</property>
-		<property name="complaints">
-			<list>
-				<ref bean="complaint4"/>
-			</list>
-		</property><property name="phases">
-			<list>
-				<ref bean="phase8"/>
-			</list>
-		</property>
-	</bean>
-	<bean id="fixUpTask5" class="domain.FixUpTask">
-		<property name="ticker" value="112348-e63fh6"/>
-		<property name="startDate" value="2018/12/11 16:00"/>
-		<property name="description" value="descripcion fix_up_task5" />
-		<property name="address" value="https://monday.com/"/>
-		<property name="maxPrice" value="3000"/>
-		<property name="estimatedDate" value="2018/12/12 21:00"/>
 		<property name="category" ref="category1"/>
 		<property name="warranty" ref="warranty5"/>
 		<property name="applications">
@@ -1894,7 +1880,7 @@
 			</list>
 		</property><property name="phases">
 			<list>
-				<ref bean="phase9"/>
+				<ref bean="phase8"/>
 			</list>
 		</property>
 	</bean>

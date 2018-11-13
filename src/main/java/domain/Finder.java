@@ -9,7 +9,6 @@ import javax.persistence.AccessType;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -97,7 +96,7 @@ public class Finder extends DomainEntity {
 		this.fixUpTask = fixUpTask;
 	}
 
-	@OneToMany
+	@ManyToMany
 	public Collection<Warranty> getWarranties() {
 		return this.warranties;
 	}
@@ -106,7 +105,7 @@ public class Finder extends DomainEntity {
 		this.warranties = warranties;
 	}
 
-	@OneToMany
+	@ManyToMany
 	public Collection<Category> getCategories() {
 		return this.categories;
 	}
