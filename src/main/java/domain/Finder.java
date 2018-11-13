@@ -6,6 +6,7 @@ import java.util.Date;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
@@ -70,14 +71,14 @@ public class Finder extends DomainEntity {
 
 	//Relationships
 	private Configuration			configuration;
-	private Collection<Fix_up_Task>	fixUpTask;
+	private Collection<FixUpTask>	fixUpTask;
 	private Collection<Warranty>	warranties;
 	private Collection<Category>	categories;
 
 
 	@NotNull
 	@Valid
-	@OneToOne(optional = false)
+	@OneToOne(cascade = CascadeType.ALL)
 	public Configuration getConfiguration() {
 		return this.configuration;
 	}
@@ -87,11 +88,11 @@ public class Finder extends DomainEntity {
 	}
 
 	@OneToMany(mappedBy = "finder")
-	public Collection<Fix_up_Task> getFixUpTask() {
+	public Collection<FixUpTask> getFixUpTask() {
 		return this.fixUpTask;
 	}
 
-	public void setFixUpTask(final Collection<Fix_up_Task> fixUpTask) {
+	public void setFixUpTask(final Collection<FixUpTask> fixUpTask) {
 		this.fixUpTask = fixUpTask;
 	}
 

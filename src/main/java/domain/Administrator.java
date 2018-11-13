@@ -13,21 +13,21 @@ import javax.persistence.OneToMany;
 public class Administrator extends Actor {
 
 	//Relationships 
-	private Collection<Category>		categorys;
+	private Collection<Category>		categories;
 	private Collection<Configuration>	configurations;
 
 
 	@OneToMany
-	public Collection<Category> getCategorys() {
-		return this.categorys;
+	public Collection<Category> getCategories() {
+		return this.categories;
 	}
 	@OneToMany
 	public Collection<Configuration> getConfigurations() {
 		return this.configurations;
 	}
 
-	public void setCategorys(final Collection<Category> categorys) {
-		this.categorys = categorys;
+	public void setCategories(final Collection<Category> categories) {
+		this.categories = categories;
 	}
 
 	public void setConfigurations(final Collection<Configuration> configurations) {
