@@ -761,7 +761,6 @@
 		<property name="address" value="https://monday.com/"/>
 		<property name="maxPrice" value="2500"/>
 		<property name="estimatedDate" value="2018/12/11 8:00"/>
-		<property name="finder" ref="finder1"/>
 		<property name="category" ref="category1"/>
 		<property name="warranty" ref="warranty1"/>
 		<property name="applications">
