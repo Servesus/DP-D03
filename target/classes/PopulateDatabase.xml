@@ -822,6 +822,90 @@
 		</property>
 	</bean>
 	
+	<bean id="curricula3" class="domain.Curricula">
+		<property name="ticker" value="103018-gy5643"/>
+		<property name="personalRecord" ref="personalRecord3"/>
+		<property name="educationalRecord">
+			<list>
+			</list>
+		</property>
+		<property name="professionalRecord">
+			<list>
+			</list>
+		</property>
+		<property name="endorserRecord">
+			<list>
+			</list>
+		</property>
+		<property name="miscRecord">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="curricula4" class="domain.Curricula">
+		<property name="ticker" value="103018-vcey63"/>
+		<property name="personalRecord" ref="personalRecord4"/>
+		<property name="educationalRecord">
+			<list>
+			</list>
+		</property>
+		<property name="professionalRecord">
+			<list>
+			</list>
+		</property>
+		<property name="endorserRecord">
+			<list>
+			</list>
+		</property>
+		<property name="miscRecord">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="curricula5" class="domain.Curricula">
+		<property name="ticker" value="103018-oiu435"/>
+		<property name="personalRecord" ref="personalRecord5"/>
+		<property name="educationalRecord">
+			<list>
+			</list>
+		</property>
+		<property name="professionalRecord">
+			<list>
+			</list>
+		</property>
+		<property name="endorserRecord">
+			<list>
+			</list>
+		</property>
+		<property name="miscRecord">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="curricula6" class="domain.Curricula">
+		<property name="ticker" value="103018-yter53"/>
+		<property name="personalRecord" ref="personalRecord6"/>
+		<property name="educationalRecord">
+			<list>
+			</list>
+		</property>
+		<property name="professionalRecord">
+			<list>
+			</list>
+		</property>
+		<property name="endorserRecord">
+			<list>
+			</list>
+		</property>
+		<property name="miscRecord">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
 	<!-- PERSONAL RECORDS -->
 	<bean id="personalRecord1" class="domain.PersonalRecord">
 		<property name="name" value="Manuel"/>
@@ -841,6 +925,46 @@
 		<property name="phone" value="666778899"/>
 		<property name="photo" value="https://www.pinterest.es/pin/2/"/>
 		<property name="linkedInProfile" value="https://www.linkedin.com/jobs/view/2/"/>
+	</bean>
+	
+	<bean id="personalRecord3" class="domain.PersonalRecord">
+		<property name="name" value="Miguel"/>
+		<property name="middleName" value=""/>
+		<property name="surname" value="Velasco"/>
+		<property name="email" value="miguelvelasco@gmail.com"/>
+		<property name="phone" value="666778844"/>
+		<property name="photo" value="https://www.pinterest.es/pin/67/"/>
+		<property name="linkedInProfile" value="https://www.linkedin.com/jobs/view/67/"/>
+	</bean>
+	
+	<bean id="personalRecord4" class="domain.PersonalRecord">
+		<property name="name" value="Juan"/>
+		<property name="middleName" value="Manuel"/>
+		<property name="surname" value="Garrocho"/>
+		<property name="email" value="juanmagarrocho@gmail.com"/>
+		<property name="phone" value="666733399"/>
+		<property name="photo" value="https://www.pinterest.es/pin/45/"/>
+		<property name="linkedInProfile" value="https://www.linkedin.com/jobs/view/45/"/>
+	</bean>
+	
+	<bean id="personalRecord5" class="domain.PersonalRecord">
+		<property name="name" value="Sergio"/>
+		<property name="middleName" value=""/>
+		<property name="surname" value="Perez"/>
+		<property name="email" value="sergioperez@gmail.com"/>
+		<property name="phone" value="666778833"/>
+		<property name="photo" value="https://www.pinterest.es/pin/33/"/>
+		<property name="linkedInProfile" value="https://www.linkedin.com/jobs/view/33/"/>
+	</bean>
+	
+	<bean id="personalRecord6" class="domain.PersonalRecord">
+		<property name="name" value="Manuel"/>
+		<property name="middleName" value=""/>
+		<property name="surname" value="Rubio"/>
+		<property name="email" value="manuelrubio@gmail.com"/>
+		<property name="phone" value="666778811"/>
+		<property name="photo" value="https://www.pinterest.es/pin/32/"/>
+		<property name="linkedInProfile" value="https://www.linkedin.com/jobs/view/32/"/>
 	</bean>
 	<!-- EDUCATIONAL RECORD -->
 	<bean id="educationalRecord1" class="domain.EducationalRecord">
