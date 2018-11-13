@@ -65,6 +65,7 @@
 	
 	<!-- Other domain beans come here -->	
 	
+	<!-- Customer -->
 	<bean id="customer1" class="domain.Customer">
 		<property name="name" value="customer1"/>
 		<property name="middleName" value=""/>
@@ -125,6 +126,25 @@
 		<property name="socialNetProfLink" value="https://www.twitch.tv/reventxz"/>
 		<property name="name" value="Antonio Pino"/>
 	</bean>
+	<bean id="profile3" class="domain.Profile">
+		<property name="nick" value="Sergii"/>
+		<property name="socialNetName" value="sergii1998"/>
+		<property name="socialNetProfLink" value="https://www.twitch.tv/"/>
+		<property name="name" value="Sergio Perez"/>
+	</bean>
+	<bean id="profile4" class="domain.Profile">
+		<property name="nick" value="Yisus"/>
+		<property name="socialNetName" value="Yisus1998"/>
+		<property name="socialNetProfLink" value="https://www.twitch.tv/"/>
+		<property name="name" value="Jesus Garrocho"/>
+	</bean>
+	<bean id="profile5" class="domain.Profile">
+		<property name="nick" value="MigueLitro"/>
+		<property name="socialNetName" value="MigueLitri1998"/>
+		<property name="socialNetProfLink" value="https://www.twitch.tv/"/>
+		<property name="name" value="Miguel Velasco"/>
+	</bean>
+	
 
 	<!--Phase --> 
 	<bean id="phase1" class="domain.Phase">
@@ -736,7 +756,70 @@
 		</property>
 		<property name="fixUpTasks">
 			<list>
-				<ref bean="fixUpTask1"/>
+				<ref bean="fixUpTask2"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="complaint3" class="domain.Complaint">
+		<property name="ticker" value="222894-f8t751"/>
+		<property name="moment" value="2018/11/11 21:00"/>
+		<property name="description" value="esta es la descripcion de complaint3" />
+		<property name="attachment">
+			<list>
+				<value>"https://www.pinterest.es/pin/10/"</value>
+			</list>
+			</property>
+		<property name="customer" ref="customer1"/>
+		<property name="reports">
+			<list>
+				<ref bean="report1"/>
+			</list>
+		</property>
+		<property name="fixUpTasks">
+			<list>
+				<ref bean="fixUpTask3"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="complaint4" class="domain.Complaint">
+		<property name="ticker" value="133333-f8t751"/>
+		<property name="moment" value="2018/11/12 22:00"/>
+		<property name="description" value="esta es la descripcion de complaint4" />
+		<property name="attachment">
+			<list>
+				<value>"https://www.pinterest.es/pin/11/"</value>
+			</list>
+			</property>
+		<property name="customer" ref="customer1"/>
+		<property name="reports">
+			<list>
+				<ref bean="report2"/>
+			</list>
+		</property>
+		<property name="fixUpTasks">
+			<list>
+				<ref bean="fixUpTask4"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="complaint5" class="domain.Complaint">
+		<property name="ticker" value="104454-f8t751"/>
+		<property name="moment" value="2018/12/11 16:00"/>
+		<property name="description" value="esta es la descripcion de complaint5" />
+		<property name="attachment">
+			<list>
+				<value>"https://www.pinterest.es/pin/12/"</value>
+			</list>
+			</property>
+		<property name="customer" ref="customer1"/>
+		<property name="reports">
+			<list>
+				<ref bean="report2"/>
+			</list>
+		</property>
+		<property name="fixUpTasks">
+			<list>
+				<ref bean="fixUpTask5"/>
 			</list>
 		</property>
 	</bean>
@@ -752,6 +835,24 @@
 		<property name="terms" value="Si se ha producido despues de la fecha de compra esta en garantia durante 2 años"/>
 		<property name="applicableLaws" value="Todas estas leyes figuran en el decreto nº32" />
 		<property name="isFinal" value="true"/>
+	</bean>
+	<bean id="warranty3" class="domain.Warranty">
+		<property name="title" value="Garantia PS4"/>
+		<property name="terms" value="Si se ha producido despues de la fecha de compra esta en garantia durante 4 años"/>
+		<property name="applicableLaws" value="Todas estas leyes figuran en el decreto nº48" />
+		<property name="isFinal" value="true"/>
+	</bean>
+	<bean id="warranty4" class="domain.Warranty">
+		<property name="title" value="Garantia XboxOne"/>
+		<property name="terms" value="Si se ha producido despues de la fecha de compra esta en garantia durante 4 años"/>
+		<property name="applicableLaws" value="Todas estas leyes figuran en el decreto nº49" />
+		<property name="isFinal" value="false"/>
+	</bean>
+	<bean id="warranty5" class="domain.Warranty">
+		<property name="title" value="Garantia Whooka REDocre"/>
+		<property name="terms" value="Si se ha producido despues de la fecha de compra esta en garantia durante 2 años"/>
+		<property name="applicableLaws" value="Todas estas leyes figuran en el decreto nº118" />
+		<property name="isFinal" value="false"/>
 	</bean>
 	<!--FIX_UP_TASK-->
 	<bean id="fixUpTask1" class="domain.FixUpTask">
@@ -778,7 +879,126 @@
 			</list>
 		</property>
 	</bean>
-	
+	<bean id="fixUpTask2" class="domain.FixUpTask">
+		<property name="ticker" value="123238-e63fh6"/>
+		<property name="startDate" value="2018/12/11 9:00"/>
+		<property name="description" value="descripcion fix_up_task2" />
+		<property name="address" value="https://monday.com/"/>
+		<property name="maxPrice" value="3500"/>
+		<property name="estimatedDate" value="2018/12/12 8:00"/>
+		<property name="category" ref="category1"/>
+		<property name="warranty" ref="warranty2"/>
+		<property name="applications">
+			<list>
+				<ref bean="application1"/>
+			</list>
+		</property>
+		<property name="complaints">
+			<list>
+				<ref bean="complaint2"/>
+			</list>
+		</property><property name="phases">
+			<list>
+				<ref bean="phase5"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="fixUpTask3" class="domain.FixUpTask">
+		<property name="ticker" value="132138-e63dh8"/>
+		<property name="startDate" value="2018/12/12 10:00"/>
+		<property name="description" value="descripcion fix_up_task3" />
+		<property name="address" value="https://monday.com/"/>
+		<property name="maxPrice" value="3400"/>
+		<property name="estimatedDate" value="2018/12/12 13:00"/>
+		<property name="category" ref="category1"/>
+		<property name="warranty" ref="warranty3"/>
+		<property name="applications">
+			<list>
+				<ref bean="application1"/>
+			</list>
+		</property>
+		<property name="complaints">
+			<list>
+				<ref bean="complaint3"/>
+			</list>
+		</property><property name="phases">
+			<list>
+				<ref bean="phase6"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="fixUpTask3" class="domain.FixUpTask">
+		<property name="ticker" value="132138-f63xs6"/>
+		<property name="startDate" value="2018/12/11 12:00"/>
+		<property name="description" value="descripcion fix_up_task3" />
+		<property name="address" value="https://monday.com/"/>
+		<property name="maxPrice" value="1500"/>
+		<property name="estimatedDate" value="2018/12/12 14:00"/>
+		<property name="category" ref="category1"/>
+		<property name="warranty" ref="warranty4"/>
+		<property name="applications">
+			<list>
+				<ref bean="application1"/>
+			</list>
+		</property>
+		<property name="complaints">
+			<list>
+				<ref bean="complaint4"/>
+			</list>
+		</property><property name="phases">
+			<list>
+				<ref bean="phase7"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="fixUpTask4" class="domain.FixUpTask">
+		<property name="ticker" value="123898-g63xx6"/>
+		<property name="startDate" value="2018/12/11 15:00"/>
+		<property name="description" value="descripcion fix_up_task4" />
+		<property name="address" value="https://monday.com/"/>
+		<property name="maxPrice" value="2000"/>
+		<property name="estimatedDate" value="2018/12/11 16:00"/>
+		<property name="category" ref="category1"/>
+		<property name="warranty" ref="warranty4"/>
+		<property name="applications">
+			<list>
+				<ref bean="application1"/>
+			</list>
+		</property>
+		<property name="complaints">
+			<list>
+				<ref bean="complaint4"/>
+			</list>
+		</property><property name="phases">
+			<list>
+				<ref bean="phase8"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="fixUpTask5" class="domain.FixUpTask">
+		<property name="ticker" value="112348-e63fh6"/>
+		<property name="startDate" value="2018/12/11 16:00"/>
+		<property name="description" value="descripcion fix_up_task5" />
+		<property name="address" value="https://monday.com/"/>
+		<property name="maxPrice" value="3000"/>
+		<property name="estimatedDate" value="2018/12/12 21:00"/>
+		<property name="category" ref="category1"/>
+		<property name="warranty" ref="warranty5"/>
+		<property name="applications">
+			<list>
+				<ref bean="application1"/>
+			</list>
+		</property>
+		<property name="complaints">
+			<list>
+				<ref bean="complaint5"/>
+			</list>
+		</property><property name="phases">
+			<list>
+				<ref bean="phase9"/>
+			</list>
+		</property>
+	</bean>
 	<!-- Application -->
 	<bean id="application1" class="domain.Application">
 		<property name="moment" value="15:30:00 11/11/2018"/>
