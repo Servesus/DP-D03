@@ -62,6 +62,50 @@
 			</list>
 		</property>
 	</bean>
+	<bean id="userAccount5" class="security.UserAccount">
+		<property name="username" value="handyWorker2" />
+		<property name="password" value="handyWorker2Pass" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="HANDYWORKER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	<bean id="userAccount6" class="security.UserAccount">
+		<property name="username" value="handyWorker3" />
+		<property name="password" value="handyWorker3Pass" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="HANDYWORKER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	<bean id="userAccount7" class="security.UserAccount">
+		<property name="username" value="handyWorker4" />
+		<property name="password" value="handyWorker4Pass" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="HANDYWORKER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	<bean id="userAccount8" class="security.UserAccount">
+		<property name="username" value="handyWorker5" />
+		<property name="password" value="handyWorker5Pass" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="HANDYWORKER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
 	
 	<!-- Other domain beans come here -->	
 	
@@ -157,6 +201,46 @@
 		<property name="number" value="2" />
 	 	<property name="fixUpTask" ref="fixUpTask1"/>
 	</bean>
+	<bean id="phase5" class="domain.Phase">
+		<property name="title" value="phase1" />
+		<property name="description" value="description1" />
+		<property name="startMoment" value="12/11/2018" />
+		<property name="finishMoment" value="13/11/2018" />
+		<property name="number" value="1" />
+	 	<property name="fixUpTask" ref="fixUpTask2"/>
+	</bean>
+	<bean id="phase6" class="domain.Phase">
+		<property name="title" value="phase1" />
+		<property name="description" value="description1" />
+		<property name="startMoment" value="12/11/2018" />
+		<property name="finishMoment" value="13/11/2018" />
+		<property name="number" value="1" />
+	 	<property name="fixUpTask" ref="fixUpTask3"/>
+	</bean>
+	<bean id="phase7" class="domain.Phase">
+		<property name="title" value="phase1" />
+		<property name="description" value="description1" />
+		<property name="startMoment" value="12/11/2018" />
+		<property name="finishMoment" value="13/11/2018" />
+		<property name="number" value="1" />
+	 	<property name="fixUpTask" ref="fixUpTask4"/>
+	</bean>
+	<bean id="phase8" class="domain.Phase">
+		<property name="title" value="phase1" />
+		<property name="description" value="description1" />
+		<property name="startMoment" value="12/11/2018" />
+		<property name="finishMoment" value="13/11/2018" />
+		<property name="number" value="1" />
+	 	<property name="fixUpTask" ref="fixUpTask5"/>
+	</bean>
+	<bean id="phase9" class="domain.Phase">
+		<property name="title" value="phase1" />
+		<property name="description" value="description1" />
+		<property name="startMoment" value="12/11/2018" />
+		<property name="finishMoment" value="13/11/2018" />
+		<property name="number" value="1" />
+	 	<property name="fixUpTask" ref="fixUpTask6"/>
+	</bean>
 	<!-- Message --> 
 	<bean id="message1" class="domain.Message">
 		<property name="sendDate" value="11/11/2018" />
@@ -208,12 +292,178 @@
 		</list>
 		</property>
 	</bean>
+	<bean id="handyWorker2" class="domain.HandyWorker">
+		<property name="name" value="handyWorker2" />
+		<property name="middleName" value="handyWorker2" />
+		<property name="surname" value="handyWorker2"/>
+		<property name="photo" value="http://www.tumblr.com/photo2"/>
+		<property name="email" value="handyworker2@gmail.com"/>
+		<property name="phoneNumber" value="652914586"/>
+		<property name="address" value="Torremanzana 38"/>
+		<property name="make" value=""/>
+		<property name="isSuspicious" value="false"/>
+		<property name="isBanned" value="false"/>
+		<property name="userAccount" ref="userAccount5"/>
+		<property name="profiles">
+			<list>
+				<ref bean="box5"/>
+			</list>
+		</property>
+		<property name="boxes">
+		<list>
+		</list>
+		</property>
+		<property name="applications">
+		<list>
+			<ref bean="application2"/>
+		</list>
+		</property>
+		<property name="phases">
+		<list>
+			<ref bean="phase5"/>
+			<ref bean="phase6"/>
+			<ref bean="phase7"/>
+			<ref bean="phase8"/>
+			<ref bean="phase9"/>
+		</list>
+		</property>
+		<property name="curricula" ref="curricula2"/>
+		<property name="finder">
+		<list>
+			<ref bean="finder2"/>
+		</list>
+		</property>
+	</bean>
+	<bean id="handyWorker3" class="domain.HandyWorker">
+		<property name="name" value="handyWorker3" />
+		<property name="middleName" value="handyWorker3" />
+		<property name="surname" value="handyWorker3"/>
+		<property name="photo" value="http://www.tumblr.com/photo3"/>
+		<property name="email" value="handyworker3@gmail.com"/>
+		<property name="phoneNumber" value="652944586"/>
+		<property name="address" value="Torremanzana 39"/>
+		<property name="make" value=""/>
+		<property name="isSuspicious" value="false"/>
+		<property name="isBanned" value="false"/>
+		<property name="userAccount" ref="userAccount6"/>
+		<property name="profiles">
+			<list>
+			</list>
+		</property>
+		<property name="boxes">
+		<list>
+			<ref bean="box6"/>
+		</list>
+		</property>
+		<property name="applications">
+		<list>
+			<ref bean="application3"/>
+			<ref bean="application4"/>
+		</list>
+		</property>
+		<property name="phases">
+		<list>
+		</list>
+		</property>
+		<property name="curricula" ref="curricula3"/>
+		<property name="finder">
+		<list>
+			<ref bean="finder3"/>
+		</list>
+		</property>
+	</bean>
+	<bean id="handyWorker4" class="domain.HandyWorker">
+		<property name="name" value="handyWorker4" />
+		<property name="middleName" value="handyWorker4" />
+		<property name="surname" value="handyWorker4"/>
+		<property name="photo" value="http://www.tumblr.com/photo4"/>
+		<property name="email" value="handyworker4@gmail.com"/>
+		<property name="phoneNumber" value="632944586"/>
+		<property name="address" value="Torremanzana 40"/>
+		<property name="make" value=""/>
+		<property name="isSuspicious" value="false"/>
+		<property name="isBanned" value="false"/>
+		<property name="userAccount" ref="userAccount7"/>
+		<property name="profiles">
+			<list>
+			</list>
+		</property>
+		<property name="boxes">
+		<list>
+			<ref bean="box7"/>
+		</list>
+		</property>
+		<property name="applications">
+		<list>
+			<ref bean="application5"/>
+			<ref bean="application6"/>
+		</list>
+		</property>
+		<property name="phases">
+		<list>
+		</list>
+		</property>
+		<property name="curricula" ref="curricula4"/>
+		<property name="finder">
+		<list>
+		</list>
+		</property>
+	</bean>
+	<bean id="handyWorker5" class="domain.HandyWorker">
+		<property name="name" value="handyWorker5" />
+		<property name="middleName" value="handyWorker5" />
+		<property name="surname" value="handyWorker5"/>
+		<property name="photo" value="http://www.tumblr.com/photo5"/>
+		<property name="email" value="handyworker5@gmail.com"/>
+		<property name="phoneNumber" value="632974586"/>
+		<property name="address" value="Torremanzana 41"/>
+		<property name="make" value=""/>
+		<property name="isSuspicious" value="false"/>
+		<property name="isBanned" value="false"/>
+		<property name="userAccount" ref="userAccount8"/>
+		<property name="profiles">
+			<list>
+			</list>
+		</property>
+		<property name="boxes">
+		<list>
+			<ref bean="box8"/>
+		</list>
+		</property>
+		<property name="applications">
+		<list>
+			<ref bean="application7"/>
+		</list>
+		</property>
+		<property name="phases">
+		<list>
+		</list>
+		</property>
+		<property name="curricula" ref="curricula5"/>
+		<property name="finder">
+		<list>
+		</list>
+		</property>
+	</bean>
+	
 	<!-- Configuration -->
 	<bean id="configuration1" class="domain.Configuration">
 		<property name="maxResults" value="10"/>
 		<property name="maxTime" value="1"/>
 		<property name="lastUpdate" value="11/11/2018 10:00"/>
 		<property name="finder" ref="finder1"/>
+	</bean>
+	<bean id="configuration2" class="domain.Configuration">
+		<property name="maxResults" value="10"/>
+		<property name="maxTime" value="1"/>
+		<property name="lastUpdate" value="12/11/2018 10:00"/>
+		<property name="finder" ref="finder2"/>
+	</bean>
+	<bean id="configuration3" class="domain.Configuration">
+		<property name="maxResults" value="10"/>
+		<property name="maxTime" value="1"/>
+		<property name="lastUpdate" value="13/11/2018 10:00"/>
+		<property name="finder" ref="finder3"/>
 	</bean>
 	
 	<!-- Finder --> 
@@ -227,6 +477,50 @@
 		<property name="fixUpTask">
 			<list>
 				<ref bean="fixUpTask1"/>
+			</list>
+		</property>
+		<property name="warranties">
+		<list>
+				<ref bean="warranty1"/>
+			</list>
+		</property>
+		<property name="categories">
+		<list>
+				<ref bean="category1"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="finder2" class="domain.Finder">
+		<property name="singleKeyWord" value="keyWord2"/>
+		<property name="rangeStart"><null/></property>
+		<property name="rangeFinish"><null/></property>
+		<property name="dateStartRange" value="12/11/2018"/>
+		<property name="dateFinishRange" value="13/11/2018"></property>
+		<property name="configuration" ref="configuration2"/>
+		<property name="fixUpTask">
+			<list>
+			</list>
+		</property>
+		<property name="warranties">
+		<list>
+				<ref bean="warranty4"/>
+			</list>
+		</property>
+		<property name="categories">
+		<list>
+				<ref bean="category1"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="finder3" class="domain.Finder">
+		<property name="singleKeyWord" value="keyWord3"/>
+		<property name="rangeStart"><null/></property>
+		<property name="rangeFinish"><null/></property>
+		<property name="dateStartRange" value="12/11/2018"/>
+		<property name="dateFinishRange" value="13/11/2018"></property>
+		<property name="configuration" ref="configuration3"/>
+		<property name="fixUpTask">
+			<list>
 			</list>
 		</property>
 		<property name="warranties">
@@ -295,6 +589,70 @@
 	
 	<bean id="box4" class="domain.Box">
 		<property name="name" value="Box1"/>
+		<property name="isSystem" value="false"/>
+		<property name="parentBoxes">
+			<list>
+			</list>
+		</property>
+		<property name="childBoxes">
+			<list>
+			</list>
+		</property>
+		<property name="messages">
+			<list>
+			</list>
+		</property>
+	</bean>
+	<bean id="box5" class="domain.Box">
+		<property name="name" value="Box5"/>
+		<property name="isSystem" value="false"/>
+		<property name="parentBoxes">
+			<list>
+			</list>
+		</property>
+		<property name="childBoxes">
+			<list>
+			</list>
+		</property>
+		<property name="messages">
+			<list>
+			</list>
+		</property>
+	</bean>
+	<bean id="box6" class="domain.Box">
+		<property name="name" value="Box5"/>
+		<property name="isSystem" value="false"/>
+		<property name="parentBoxes">
+			<list>
+			</list>
+		</property>
+		<property name="childBoxes">
+			<list>
+			</list>
+		</property>
+		<property name="messages">
+			<list>
+			</list>
+		</property>
+	</bean>
+	<bean id="box7" class="domain.Box">
+		<property name="name" value="Box5"/>
+		<property name="isSystem" value="false"/>
+		<property name="parentBoxes">
+			<list>
+			</list>
+		</property>
+		<property name="childBoxes">
+			<list>
+			</list>
+		</property>
+		<property name="messages">
+			<list>
+			</list>
+		</property>
+	</bean>
+	<bean id="box8" class="domain.Box">
+		<property name="name" value="Box5"/>
 		<property name="isSystem" value="false"/>
 		<property name="parentBoxes">
 			<list>
