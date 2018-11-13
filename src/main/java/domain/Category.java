@@ -20,10 +20,10 @@ public class Category extends DomainEntity {
 
 	//Getters and setters
 	@NotBlank
-	public String getNombre() {
+	public String getName() {
 		return this.name;
 	}
-	public void setNombre(final String name) {
+	public void setName(final String name) {
 		this.name = name;
 	}
 

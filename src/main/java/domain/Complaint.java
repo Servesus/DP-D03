@@ -26,22 +26,21 @@ public class Complaint extends DomainEntity {
 	private String					ticker;
 	private Date					moment;
 	private String					description;
-	private Collection<String>		attchment;
+	private Collection<String>		attachment;
 
 	//Relationships:
 	private Customer				customer;
 	private Collection<Report>		reports;
-	private Collection<Fix_up_Task>	fix_up_tasks;
+	private Collection<FixUpTask>	fixUpTasks;
 
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "^(\\d{6})(-)([A-Z0-9] {6})$")
+	@Pattern(regexp = "^(\\d{6}(-)\\w{6})$")
 	public String getTicker() {
 		return this.ticker;
 	}
 
-	@Column(unique = true)
 	public void setTicker(final String ticker) {
 		this.ticker = ticker;
 	}
@@ -64,12 +63,12 @@ public class Complaint extends DomainEntity {
 		this.description = description;
 	}
 	@ElementCollection
-	public Collection<String> getAttchment() {
-		return this.attchment;
+	public Collection<String> getAttachment() {
+		return this.attachment;
 	}
 
-	public void setAttchment(final Collection<String> attchment) {
-		this.attchment = attchment;
+	public void setAttachment(final Collection<String> attachment) {
+		this.attachment = attachment;
 	}
 
 	//Relationships:
@@ -94,13 +93,13 @@ public class Complaint extends DomainEntity {
 		this.reports = reports;
 	}
 
-	@ManyToMany(mappedBy = "complaints")
-	public Collection<Fix_up_Task> getFix_up_tasks() {
-		return this.fix_up_tasks;
+	@ManyToMany
+	public Collection<FixUpTask> getFixUpTasks() {
+		return this.fixUpTasks;
 	}
 
-	public void setFix_up_tasks(final Collection<Fix_up_Task> fix_up_tasks) {
-		this.fix_up_tasks = fix_up_tasks;
+	public void setFixUpTasks(final Collection<FixUpTask> fixUpTasks) {
+		this.fixUpTasks = fixUpTasks;
 	}
 
 }

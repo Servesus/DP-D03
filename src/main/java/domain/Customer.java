@@ -15,7 +15,7 @@ public class Customer extends Actor {
 
 	private Collection<CreditCard>	creditCards;
 	private Collection<Complaint>	complaints;
-	private Collection<Fix_up_Task>	fixUpTasks;
+	private Collection<FixUpTask>	fixUpTasks;
 
 
 	@OneToMany(cascade = CascadeType.ALL)
@@ -37,11 +37,11 @@ public class Customer extends Actor {
 	}
 
 	@OneToMany
-	public Collection<Fix_up_Task> getFixUpTasks() {
+	public Collection<FixUpTask> getFixUpTasks() {
 		return this.fixUpTasks;
 	}
 
-	public void setFixUpTasks(final Collection<Fix_up_Task> fixUpTasks) {
+	public void setFixUpTasks(final Collection<FixUpTask> fixUpTasks) {
 		this.fixUpTasks = fixUpTasks;
 	}
 

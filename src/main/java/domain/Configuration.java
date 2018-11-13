@@ -9,7 +9,6 @@ import javax.persistence.Entity;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Range;
@@ -55,9 +54,7 @@ public class Configuration extends DomainEntity {
 	private Finder	finder;
 
 
-	@NotNull
-	@Valid
-	@OneToOne(optional = false)
+	@OneToOne(mappedBy = "configuration")
 	public Finder getFinder() {
 		return this.finder;
 	}

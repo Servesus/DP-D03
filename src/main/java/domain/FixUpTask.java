@@ -19,21 +19,20 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.NotBlank;
-import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 @Access(AccessType.PROPERTY)
-public class Fix_up_Task extends DomainEntity {
+public class FixUpTask extends DomainEntity {
 
 	private String					ticker;
-	private Date					starDate;
+	private Date					startDate;
 	private String					description;
 	private String					address;
 	private double					maxPrice;
 	private Date					estimatedDate;
 
 	//Relationships:
-	private Collection<Application>	aplications;
+	private Collection<Application>	applications;
 	private Collection<Complaint>	complaints;
 	private Finder					finder;
 	private Warranty				warranty;
@@ -43,7 +42,7 @@ public class Fix_up_Task extends DomainEntity {
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "^(\\d{6})(-)([A-Z0-9] {6})$")
+	@Pattern(regexp = "^(\\d{6}(-)\\w{6})$")
 	public String getTicker() {
 		return this.ticker;
 	}
@@ -52,14 +51,13 @@ public class Fix_up_Task extends DomainEntity {
 		this.ticker = ticker;
 	}
 
-	@DateTimeFormat(pattern = "dd/MM/yyyy HH:mm")
-	@Temporal(TemporalType.DATE)
-	public Date getStarDate() {
-		return this.starDate;
+	@Temporal(TemporalType.TIMESTAMP)
+	public Date getStartDate() {
+		return this.startDate;
 	}
 
-	public void setStarDate(final Date starDate) {
-		this.starDate = starDate;
+	public void setStartDate(final Date startDate) {
+		this.startDate = startDate;
 	}
 
 	@NotBlank
@@ -98,15 +96,15 @@ public class Fix_up_Task extends DomainEntity {
 	//Relationships:
 
 	@ManyToMany(mappedBy = "fixUpTasks")
-	public Collection<Application> getAplications() {
-		return this.aplications;
+	public Collection<Application> getApplications() {
+		return this.applications;
 	}
 
-	public void setAplications(final Collection<Application> aplications) {
-		this.aplications = aplications;
+	public void setApplications(final Collection<Application> applications) {
+		this.applications = applications;
 	}
 
-	@ManyToMany
+	@ManyToMany(mappedBy = "fixUpTasks")
 	public Collection<Complaint> getComplaints() {
 		return this.complaints;
 	}

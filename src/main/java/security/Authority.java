@@ -40,7 +40,7 @@ public class Authority implements GrantedAuthority {
 	public static final String	ADMIN		= "ADMIN";
 	public static final String	CUSTOMER	= "CUSTOMER";
 	public static final String	REFEREE		= "REFEREE";
-	public static final String	HANDYWORKER	= "HANDY WORKER";
+	public static final String	HANDYWORKER	= "HANDYWORKER";
 	// Attributes -------------------------------------------------------------
 
 	private String				authority;

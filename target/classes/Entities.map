@@ -1,4 +1,9 @@
 #./src/main/resources/Entities.map
+<<<<<<< HEAD
+#Sun Nov 11 19:53:23 CET 2018
+profile2=4
+profile1=3
+=======
 #Sun Nov 11 20:55:44 CET 2018
 endorserRecord2=17
 endorserRecord1=16
@@ -12,3 +17,4 @@ professionalRecord2=24
 professionalRecord1=19
 educationalRecord2=22
 educationalRecord1=15
+>>>>>>> c9d607f3cf397ce60ca1f1e9fcd3bdebd89af9ba

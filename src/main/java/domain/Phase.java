@@ -71,17 +71,17 @@ public class Phase extends DomainEntity {
 
 
 	//Relationships
-	private Fix_up_Task	fixUpTask;
+	private FixUpTask	fixUpTask;
 
 
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	public Fix_up_Task getFixUpTask() {
+	public FixUpTask getFixUpTask() {
 		return this.fixUpTask;
 	}
 
-	public void setFixUpTask(final Fix_up_Task fixUpTask) {
+	public void setFixUpTask(final FixUpTask fixUpTask) {
 		this.fixUpTask = fixUpTask;
 	}
 

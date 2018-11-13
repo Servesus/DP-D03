@@ -15,8 +15,6 @@ import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import org.hibernate.validator.constraints.NotBlank;
-
 @Entity
 @Access(AccessType.PROPERTY)
 public class Application extends DomainEntity {
@@ -24,11 +22,11 @@ public class Application extends DomainEntity {
 	private Date					moment;
 	private double					price;
 	private Collection<String>		comments;
-	private String					status;
+	private int						status;
 	private Collection<String>		customerComments;
 	private Collection<String>		hwComments;
 	private HandyWorker				handyWorker;
-	private Collection<Fix_up_Task>	fixUpTasks;
+	private Collection<FixUpTask>	fixUpTasks;
 
 
 	@NotNull
@@ -45,8 +43,7 @@ public class Application extends DomainEntity {
 		return this.comments;
 	}
 
-	@NotBlank
-	public String getStatus() {
+	public int getStatus() {
 		return this.status;
 	}
 	@ElementCollection
@@ -70,7 +67,7 @@ public class Application extends DomainEntity {
 		this.comments = comments;
 	}
 
-	public void setStatus(final String status) {
+	public void setStatus(final int status) {
 		this.status = status;
 	}
 
@@ -94,11 +91,11 @@ public class Application extends DomainEntity {
 	}
 
 	@ManyToMany
-	public Collection<Fix_up_Task> getFixUpTasks() {
+	public Collection<FixUpTask> getFixUpTasks() {
 		return this.fixUpTasks;
 	}
 
-	public void setFixUpTasks(final Collection<Fix_up_Task> fixUpTasks) {
+	public void setFixUpTasks(final Collection<FixUpTask> fixUpTasks) {
 		this.fixUpTasks = fixUpTasks;
 	}
 

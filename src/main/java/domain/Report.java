@@ -25,7 +25,7 @@ public class Report extends DomainEntity {
 	private Date	moment;
 	private String	description;
 	private String	attachment;
-	private boolean	isFinal;
+	private Boolean	isFinal;
 
 
 	//Getters and setters
@@ -45,7 +45,7 @@ public class Report extends DomainEntity {
 		return this.attachment;
 	}
 
-	public boolean isFinal() {
+	public Boolean getIsFinal() {
 		return this.isFinal;
 	}
 
@@ -61,7 +61,7 @@ public class Report extends DomainEntity {
 		this.attachment = attachment;
 	}
 
-	public void setFinal(final boolean isFinal) {
+	public void setIsFinal(final Boolean isFinal) {
 		this.isFinal = isFinal;
 	}
 

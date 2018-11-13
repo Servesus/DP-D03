@@ -11,7 +11,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
@@ -35,7 +34,7 @@ public abstract class Actor extends DomainEntity {
 	private boolean				isBanned;
 	private UserAccount			userAccount;
 	private Collection<Profile>	profiles;
-	private Collection<Box>		box;
+	private Collection<Box>		boxes;
 
 
 	@NotBlank
@@ -62,7 +61,6 @@ public abstract class Actor extends DomainEntity {
 		return this.email;
 	}
 
-	@Pattern(regexp = "^(+[1-9]\\d{0,2}([1-9]\\d{0,2})\\d{4,})$|^(+[1-9]\\d{0,2} \\d{4,})$|^(\\d{4,})$")
 	public String getPhoneNumber() {
 		return this.phoneNumber;
 	}
@@ -70,7 +68,7 @@ public abstract class Actor extends DomainEntity {
 	public String getAddress() {
 		return this.address;
 	}
-	@NotBlank
+
 	public String getMake() {
 		return this.make;
 	}
@@ -144,12 +142,12 @@ public abstract class Actor extends DomainEntity {
 	}
 
 	@OneToMany
-	public Collection<Box> getBox() {
-		return this.box;
+	public Collection<Box> getBoxes() {
+		return this.boxes;
 	}
 
-	public void setBox(final Collection<Box> box) {
-		this.box = box;
+	public void setBoxes(final Collection<Box> boxes) {
+		this.boxes = boxes;
 	}
 
 }
