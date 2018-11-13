@@ -88,7 +88,7 @@ public class Finder extends DomainEntity {
 		this.configuration = configuration;
 	}
 
-	@ManyToMany(mappedBy = "finder")
+	@ManyToMany
 	public Collection<FixUpTask> getFixUpTask() {
 		return this.fixUpTask;
 	}

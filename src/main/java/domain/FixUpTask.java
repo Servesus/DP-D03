@@ -34,7 +34,6 @@ public class FixUpTask extends DomainEntity {
 	//Relationships:
 	private Collection<Application>	applications;
 	private Collection<Complaint>	complaints;
-	private Finder					finder;
 	private Warranty				warranty;
 	private Category				category;
 	private Collection<Phase>		phases;
@@ -111,17 +110,6 @@ public class FixUpTask extends DomainEntity {
 
 	public void setComplaints(final Collection<Complaint> complaints) {
 		this.complaints = complaints;
-	}
-
-	@Valid
-	@NotNull
-	@ManyToOne(optional = false)
-	public Finder getFinder() {
-		return this.finder;
-	}
-
-	public void setFinder(final Finder finder) {
-		this.finder = finder;
 	}
 
 	@Valid
