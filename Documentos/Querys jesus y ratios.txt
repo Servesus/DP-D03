@@ -1,0 +1,35 @@
+The average, the minimum, the maximum, and the standard deviation of the
+maximum price of the fix-up tasks.
+
+select avg (a.maxPrice) from FixUpTask f;
+
+select min (a.maxPrice) from FixUpTask f;
+
+select max(a.maxPrice) from FixUpTask f;
+
+select STD(a.maxPrice) from FixUpTask f;
+
+The average, the minimum, the maximum, and the standard deviation of the
+price offered in the applications.
+
+select avg (a.price) from Application a;
+
+select min (a.price) from Application a;
+
+select max (a.price) from Application a;
+
+select STD (a.price) from Application a;
+
+The ratio of pending applications.
+
+select 1.0*100*(select count(a) from Application a where a.status = 0)/count(a) from Application a;
+
+Sale lo que tiene que salir, no me preguntes como lo he hecho
+
+The ratio of accepted applications.
+
+select 1.0*100*(select count(a) from Application a where a.status = 1)/count(a) from Application a;
+
+The ratio of rejected applications.
+
+select 1.0*100*(select count(a) from Application a where a.status = -1)/count(a) from Application a;
