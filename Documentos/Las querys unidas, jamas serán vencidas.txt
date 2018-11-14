@@ -6,6 +6,13 @@ select max (c.fixUpTasks.size) from Customer c;
 select min (c.fixUpTasks.size) from Customer c;
 select stddev(c.fixUpTasks.size) from Customer c;
 
+The average, the minimum, the maximum, and the standard deviation of the number of applications per fix-up task.
+
+select  avg(f.applications.size),
+min(f.applications.size),
+max(f.applications.size),
+stddev(f.applications.size) from FixUpTask f;
+
 The average, the minimum, the maximum, and the standard deviation of the
 maximum price of the fix-up tasks.
 
@@ -44,7 +51,7 @@ select c from Customer c where (c.fixUpTasks.size >= 1.1*(select avg(c.fixUpTask
 The ratio of pending applications that cannot change its status because their
 time period’s elapsed.
 
-select count(a) from Application a join a.fixUpTasks r where (a.status = 0) and (r.startDate < CURRENT_TIMESTAMP());
+select count(a) from Application a  where (a.status = 0) and (a.fixUpTasks.startDate < CURRENT_TIMESTAMP());
 
 The minimum, the maximum, the average, and the standard deviation of the
 number of complaints per fix-up task.
