@@ -1,0 +1,10 @@
+The average, the minimum, the maximum, and the standard deviation of the
+maximum price of the fix-up tasks.
+
+select avg (a.maxPrice) from fixUpTask f 
+
+select min (a.maxPrice) from fixUpTask f 
+
+select max(a.maxPrice) from fixUpTask f
+
+select STD(a.maxPrice) from fixUpTask f
