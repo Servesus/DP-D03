@@ -18,7 +18,7 @@ select min (a.price) from Application a;
 
 select max (a.price) from Application a;
 
-select STD (a.price) from Application a;
+select stddev(a.price) from Application a;
 
 The ratio of pending applications.
 
