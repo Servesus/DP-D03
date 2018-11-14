@@ -10,7 +10,7 @@
  * http://www.tdg-seville.info/License.html
  -->
 
-<beans xmlns="http://www.springframework.org/schema/beans" 
+<beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	
@@ -198,7 +198,7 @@
 		<property name="photo" value="http://www.photo.com"/>
 		<property name="email" value="customer1@gmail.com"/>
 		<property name="phoneNumber" value="617910517"/>
-		<property name="address" value="Gran Vía"/>
+		<property name="address" value="Reina Mercedes"/>
 		<property name="make" value=""/>
 		<property name="isSuspicious" value="false"/>
 		<property name="isBanned" value="false"/>
@@ -220,11 +220,13 @@
 		<property name="complaints">
 			<list>
 			<ref bean="complaint1"/>
+			<ref bean="complaint2"/>
 			</list>
 		</property>
 		<property name="fixUpTasks">
 			<list>
 			<ref bean="fixUpTask1"/>
+			<ref bean="fixUpTask2"/>
 			</list>
 		</property>
 	</bean>
@@ -235,7 +237,7 @@
 		<property name="photo" value="http://www.photo2.com"/>
 		<property name="email" value="customer2@hotmail.com"/>
 		<property name="phoneNumber" value="617910615"/>
-		<property name="address" value="Reina Mercedes"/>
+		<property name="address" value="Gran Vía"/>
 		<property name="make" value="Anonymous"/>
 		<property name="isSuspicious" value="true"/>
 		<property name="isBanned" value="false"/>
@@ -256,10 +258,14 @@
 		</property>
 		<property name="complaints">
 			<list>
+			<ref bean="complaint3"/>
+			<ref bean="complaint4"/>
 			</list>
 		</property>
 		<property name="fixUpTasks">
 			<list>
+			<ref bean="fixUpTask3"/>
+			<ref bean="fixUpTask4"/>
 			</list>
 		</property>
 	</bean>
@@ -291,10 +297,12 @@
 		</property>
 		<property name="complaints">
 			<list>
+			<ref bean="complaint5"/>
 			</list>
 		</property>
 		<property name="fixUpTasks">
 			<list>
+			<ref bean="fixUpTask5"/>
 			</list>
 		</property>
 	</bean>

@@ -1,0 +1,67 @@
+The average, the minimum, the maximum, and the standard deviation of the
+number of fix-up tasks per user
+
+select avg (c.fixUpTasks.size) from Customer c;
+select max (c.fixUpTasks.size) from Customer c;
+select min (c.fixUpTasks.size) from Customer c;
+select stddev(c.fixUpTasks.size) from Customer c;
+
+The average, the minimum, the maximum, and the standard deviation of the
+maximum price of the fix-up tasks.
+
+select avg (f.maxPrice) from FixUpTask f;
+select min (f.maxPrice) from FixUpTask f;
+select max(f.maxPrice) from FixUpTask f;
+select stddev(f.maxPrice) from FixUpTask f;
+
+The average, the minimum, the maximum, and the standard deviation of the
+price offered in the applications.
+
+select avg (a.price) from Application a;
+select min (a.price) from Application a;
+select max (a.price) from Application a;
+select stddev (a.price) from Application a;
+
+The ratio of pending applications.
+
+select 100.0*(select count(a) from Application a where a.status = 0)/count(a) from Application a;
+
+Sale lo que tiene que salir, no me preguntes como lo he hecho
+
+The ratio of accepted applications.
+
+select 100.0*(select count(a) from Application a where a.status = 1)/count(a) from Application a;
+
+The ratio of rejected applications.
+
+select 100.0*(select count(a) from Application a where a.status = -1)/count(a) from Application a;
+
+The listing of customers who have published at least 10% more fix-up tasks
+than the average, ordered by number of applications.
+
+select c from Customer c where (c.fixUpTasks.size >= 1.1*(select avg(c.fixUpTasks.size) from Customer c));
+
+The ratio of pending applications that cannot change its status because their
+time period’s elapsed.
+
+select count(a) from Application a join a.fixUpTasks r where (a.status = 0) and (r.startDate < CURRENT_TIMESTAMP());
+
+The minimum, the maximum, the average, and the standard deviation of the
+number of complaints per fix-up task.
+
+select avg (f.complaints.size) from FixUpTask f;
+select max (f.complaints.size) from FixUpTask f;
+select min (f.complaints.size) from FixUpTask f;
+select stddev (f.complaints.size) from FixUpTask f;
+
+The minimum, the maximum, the average, and the standard deviation of the
+number of notes per referee report.
+
+select avg (r.notes.size) from Report r;
+select max (r.notes.size) from Report r;
+select min (r.notes.size) from Report r;
+select stddev (r.notes.size) from Report r;
+
+The ratio of fix-up tasks with a complaint.
+
+select (count(g)/count(f))*100.0 from FixUpTask f,FixUpTask g where g.complaints.size > 0;
