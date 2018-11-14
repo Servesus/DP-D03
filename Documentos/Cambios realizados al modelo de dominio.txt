@@ -7,3 +7,12 @@ Multiplicidad report complaint cambiada de 0..* ->0..* a 0..*-> 1
 Multiplicidad complaint fixUpTask cambiada de 0..*->0..* a 0..*->1
 Multiplicidad fixUpTask Application cambiada de 0..*->0..* a 1->0..*
 Multiplicidad Report Referee cambiada de 0..*->1..* a 0..* a 1
+Cambio multiplicidad userAccount actor cambia de 1..*->1 a 1->1
+Cambio multiplicidad fixUpTask category cambia de 1->1 a 0..*->1
+Cambio multiplicidad fixUpTask finder cambia de 0...*->1 a 0..*->0..*
+Cambio en la composicion Finder Configuration (quitando multiplicidad por scaffolding)
+Quitado la composicion de finder a warranty
+Quitado la composicion de finder a category
+Quitar anotacion de userAccount
+Navegabilidad de Message a Actor no estaba especificada
+
