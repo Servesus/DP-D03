@@ -15,6 +15,8 @@ import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import org.hibernate.validator.constraints.Range;
+
 @Entity
 @Access(AccessType.PROPERTY)
 public class Application extends DomainEntity {
@@ -43,6 +45,7 @@ public class Application extends DomainEntity {
 		return this.comments;
 	}
 
+	@Range(min = -1, max = 1)
 	public int getStatus() {
 		return this.status;
 	}

@@ -10,7 +10,7 @@
  * http://www.tdg-seville.info/License.html
  -->
 
-<beans xmlns="http://www.springframework.org/schema/beans"
+<beans xmlns="http://www.springframework.org/schema/beans" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	
@@ -1949,7 +1949,7 @@
 				<value>Comentario 1 de Application 3</value>
 			</list>
 		</property>
-		<property name="status" value="1"/>
+		<property name="status" value="-1"/>
 		<property name="customerComments">
 		<list>
 				<value>Comentario 1 del customer</value>
@@ -2057,7 +2057,7 @@
 				<value>Comentario 1 de Application 7</value>
 			</list>
 		</property>
-		<property name="status" value="0"/>
+		<property name="status" value="-1"/>
 		<property name="customerComments">
 		<list>
 				<value>Comentario 1 del customer</value>
