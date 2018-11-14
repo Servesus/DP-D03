@@ -1439,7 +1439,7 @@
 		</property>
 		<property name="reports">
 			<list>
-				<ref bean = "report1"/>
+				<ref bean = "report2"/>
 			</list>
 		</property>
 		<property name="boxes">
@@ -1466,7 +1466,7 @@
 		</property>
 		<property name="reports">
 			<list>
-				<ref bean = "report1"/>
+				<ref bean = "report3"/>
 			</list>
 		</property>
 		<property name="boxes">
@@ -1493,7 +1493,8 @@
 		</property>
 		<property name="reports">
 			<list>
-				<ref bean = "report1"/>
+				<ref bean = "report4"/>
+				<ref bean = "report5"/>
 			</list>
 		</property>
 		<property name="boxes">
@@ -1513,11 +1514,7 @@
 			</list>
 		</property>
 		<property name="complaint" ref="complaint1"/>
-		<property name="referees">
-			<list>
-				<ref bean = "referee1"/>
-			</list>
-		</property>
+		<property name="referee" ref="referee1"/>
 	</bean>
 	<bean id="report2" class="domain.Report">
 		<property name="moment" value="13/11/2018 16:38"/>
@@ -1530,11 +1527,7 @@
 			</list>
 		</property>
 		<property name="complaint" ref="complaint2"/>
-		<property name="referees">
-			<list>
-				<ref bean = "referee2"/>
-			</list>
-		</property>
+		<property name="referee" ref="referee2"/>
 	</bean>
 	
 	<bean id="report3" class="domain.Report">
@@ -1548,11 +1541,7 @@
 			</list>
 		</property>
 		<property name="complaint" ref="complaint3"/>
-		<property name="referees">
-			<list>
-				<ref bean = "referee3"/>
-			</list>
-		</property>
+		<property name="referee" ref="referee3"/>
 	</bean>
 	
 	<bean id="report4" class="domain.Report">
@@ -1565,11 +1554,7 @@
 			</list>
 		</property>
 		<property name="complaint" ref="complaint4"/>
-		<property name="referees">
-			<list>
-				<ref bean = "referee4"/>
-			</list>
-		</property>
+		<property name="referee" ref="referee4"/>
 	</bean>
 	
 	<bean id="report5" class="domain.Report">
@@ -1583,11 +1568,7 @@
 			</list>
 		</property>
 		<property name="complaint" ref="complaint5"/>
-		<property name="referees">
-			<list>
-				<ref bean = "referee1"/>
-			</list>
-		</property>
+		<property name="referee" ref="referee4"/>
 	</bean>
 	<!-- Note -->
 	<bean id="note1" class="domain.Note">

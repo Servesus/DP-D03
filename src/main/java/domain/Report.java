@@ -8,7 +8,6 @@ import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
@@ -70,7 +69,7 @@ public class Report extends DomainEntity {
 	//Relationships
 	private Collection<Note>	notes;
 	private Complaint			complaint;
-	private Collection<Referee>	referees;
+	private Referee				referee;
 
 
 	@OneToMany(cascade = CascadeType.ALL)
@@ -84,9 +83,9 @@ public class Report extends DomainEntity {
 	}
 
 	@NotNull
-	@ManyToMany
-	public Collection<Referee> getReferees() {
-		return this.referees;
+	@ManyToOne
+	public Referee getReferee() {
+		return this.referee;
 	}
 
 	public void setNotes(final Collection<Note> notes) {
@@ -97,8 +96,8 @@ public class Report extends DomainEntity {
 		this.complaint = complaint;
 	}
 
-	public void setReferees(final Collection<Referee> referees) {
-		this.referees = referees;
+	public void setReferee(final Referee referee) {
+		this.referee = referee;
 	}
 
 }
