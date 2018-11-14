@@ -7,7 +7,7 @@ select min (a.maxPrice) from FixUpTask f;
 
 select max(a.maxPrice) from FixUpTask f;
 
-select STD(a.maxPrice) from FixUpTask f;
+select stddev(a.maxPrice) from FixUpTask f;
 
 The average, the minimum, the maximum, and the standard deviation of the
 price offered in the applications.
@@ -18,4 +18,4 @@ select min (a.price) from Application a;
 
 select max (a.price) from Application a;
 
-select STD (a.price) from Application a;
+select stddev(a.price) from Application a;
