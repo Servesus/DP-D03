@@ -3,3 +3,6 @@ Composicion finder->category estaba mal
 Cambio navegabilidad Message--> Actor (send)
 Eliminación atributos sender, recipient en Message
 Nueva navegabilidad Actor ---> Box
+Multiplicidad report complaint cambiada de 0..* ->0..* a 0..*-> 1
+Multiplicidad complaint fixUpTask cambiada de 0..*->0..* a 0..*->1
+Multiplicidad fixUpTask Application cambiada de 0..*->0..* a 1->0..*

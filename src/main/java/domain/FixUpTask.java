@@ -8,7 +8,6 @@ import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
@@ -94,7 +93,7 @@ public class FixUpTask extends DomainEntity {
 	}
 	//Relationships:
 
-	@ManyToMany(mappedBy = "fixUpTasks")
+	@OneToMany(mappedBy = "fixUpTasks")
 	public Collection<Application> getApplications() {
 		return this.applications;
 	}
@@ -103,7 +102,7 @@ public class FixUpTask extends DomainEntity {
 		this.applications = applications;
 	}
 
-	@ManyToMany(mappedBy = "fixUpTasks")
+	@OneToMany(mappedBy = "fixUpTasks")
 	public Collection<Complaint> getComplaints() {
 		return this.complaints;
 	}

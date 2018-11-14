@@ -8,7 +8,6 @@ import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -21,14 +20,14 @@ import org.hibernate.validator.constraints.Range;
 @Access(AccessType.PROPERTY)
 public class Application extends DomainEntity {
 
-	private Date					moment;
-	private double					price;
-	private Collection<String>		comments;
-	private int						status;
-	private Collection<String>		customerComments;
-	private Collection<String>		hwComments;
-	private HandyWorker				handyWorker;
-	private Collection<FixUpTask>	fixUpTasks;
+	private Date				moment;
+	private double				price;
+	private Collection<String>	comments;
+	private int					status;
+	private Collection<String>	customerComments;
+	private Collection<String>	hwComments;
+	private HandyWorker			handyWorker;
+	private FixUpTask			fixUpTasks;
 
 
 	@NotNull
@@ -93,12 +92,12 @@ public class Application extends DomainEntity {
 		this.handyWorker = handyWorker;
 	}
 
-	@ManyToMany
-	public Collection<FixUpTask> getFixUpTasks() {
+	@ManyToOne(optional = false)
+	public FixUpTask getFixUpTasks() {
 		return this.fixUpTasks;
 	}
 
-	public void setFixUpTasks(final Collection<FixUpTask> fixUpTasks) {
+	public void setFixUpTasks(final FixUpTask fixUpTasks) {
 		this.fixUpTasks = fixUpTasks;
 	}
 

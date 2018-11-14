@@ -1512,11 +1512,7 @@
 				<ref bean = "note1"/>
 			</list>
 		</property>
-		<property name="complaint">
-			<list>
-				<ref bean = "complaint1"/>
-			</list>
-		</property>
+		<property name="complaint" ref="complaint1"/>
 		<property name="referees">
 			<list>
 				<ref bean = "referee1"/>
@@ -1533,11 +1529,7 @@
 				<ref bean = "note3"/>
 			</list>
 		</property>
-		<property name="complaint">
-			<list>
-				<ref bean = "complaint2"/>
-			</list>
-		</property>
+		<property name="complaint" ref="complaint2"/>
 		<property name="referees">
 			<list>
 				<ref bean = "referee2"/>
@@ -1555,11 +1547,7 @@
 				
 			</list>
 		</property>
-		<property name="complaint">
-			<list>
-				<ref bean = "complaint3"/>
-			</list>
-		</property>
+		<property name="complaint" ref="complaint3"/>
 		<property name="referees">
 			<list>
 				<ref bean = "referee3"/>
@@ -1574,14 +1562,9 @@
 		<property name="isFinal" value="true"/>
 		<property name="notes">
 			<list>
-				
 			</list>
 		</property>
-		<property name="complaint">
-			<list>
-				<ref bean = "complaint4"/>
-			</list>
-		</property>
+		<property name="complaint" ref="complaint4"/>
 		<property name="referees">
 			<list>
 				<ref bean = "referee4"/>
@@ -1599,11 +1582,7 @@
 				
 			</list>
 		</property>
-		<property name="complaint">
-			<list>
-				<ref bean = "complaint5"/>
-			</list>
-		</property>
+		<property name="complaint" ref="complaint5"/>
 		<property name="referees">
 			<list>
 				<ref bean = "referee1"/>
@@ -1649,11 +1628,7 @@
 				<ref bean="report1"/>
 			</list>
 		</property>
-		<property name="fixUpTasks">
-			<list>
-				<ref bean="fixUpTask1"/>
-			</list>
-		</property>
+		<property name="fixUpTasks" ref="fixUpTask1"/>
 	</bean>
 	
 	<bean id="complaint2" class="domain.Complaint">
@@ -1668,14 +1643,10 @@
 		<property name="customer" ref="customer1"/>
 		<property name="reports">
 			<list>
-				<ref bean="report1"/>
+				<ref bean="report2"/>
 			</list>
 		</property>
-		<property name="fixUpTasks">
-			<list>
-				<ref bean="fixUpTask2"/>
-			</list>
-		</property>
+		<property name="fixUpTasks" ref="fixUpTask2"/>
 	</bean>
 	<bean id="complaint3" class="domain.Complaint">
 		<property name="ticker" value="222894-f8t751"/>
@@ -1686,17 +1657,13 @@
 				<value>"https://www.pinterest.es/pin/10/"</value>
 			</list>
 			</property>
-		<property name="customer" ref="customer1"/>
+		<property name="customer" ref="customer2"/>
 		<property name="reports">
 			<list>
-				<ref bean="report1"/>
+				<ref bean="report3"/>
 			</list>
 		</property>
-		<property name="fixUpTasks">
-			<list>
-				<ref bean="fixUpTask3"/>
-			</list>
-		</property>
+		<property name="fixUpTasks" ref="fixUpTask4"/>
 	</bean>
 	<bean id="complaint4" class="domain.Complaint">
 		<property name="ticker" value="133333-f8t751"/>
@@ -1707,17 +1674,13 @@
 				<value>"https://www.pinterest.es/pin/11/"</value>
 			</list>
 			</property>
-		<property name="customer" ref="customer1"/>
+		<property name="customer" ref="customer2"/>
 		<property name="reports">
 			<list>
-				<ref bean="report2"/>
+				<ref bean="report4"/>
 			</list>
 		</property>
-		<property name="fixUpTasks">
-			<list>
-				<ref bean="fixUpTask4"/>
-			</list>
-		</property>
+		<property name="fixUpTasks" ref="fixUpTask4"/>
 	</bean>
 	<bean id="complaint5" class="domain.Complaint">
 		<property name="ticker" value="104454-f8t751"/>
@@ -1731,14 +1694,10 @@
 		<property name="customer" ref="customer1"/>
 		<property name="reports">
 			<list>
-				<ref bean="report2"/>
+				<ref bean="report5"/>
 			</list>
 		</property>
-		<property name="fixUpTasks">
-			<list>
-				<ref bean="fixUpTask5"/>
-			</list>
-		</property>
+		<property name="fixUpTasks" ref="fixUpTask2"/>
 	</bean>
 	<!--WARRANTY--> 
 		<bean id="warranty1" class="domain.Warranty">
@@ -1807,12 +1766,13 @@
 		<property name="warranty" ref="warranty2"/>
 		<property name="applications">
 			<list>
-				<ref bean="application1"/>
+				<ref bean="application2"/>
 			</list>
 		</property>
 		<property name="complaints">
 			<list>
 				<ref bean="complaint2"/>
+				<ref bean="complaint5"/>
 			</list>
 		</property><property name="phases">
 			<list>
@@ -1831,12 +1791,12 @@
 		<property name="warranty" ref="warranty3"/>
 		<property name="applications">
 			<list>
-				<ref bean="application1"/>
+				<ref bean="application3"/>
+				<ref bean="application4"/>
 			</list>
 		</property>
 		<property name="complaints">
 			<list>
-				<ref bean="complaint3"/>
 			</list>
 		</property><property name="phases">
 			<list>
@@ -1855,11 +1815,13 @@
 		<property name="warranty" ref="warranty4"/>
 		<property name="applications">
 			<list>
-				<ref bean="application1"/>
+				<ref bean="application5"/>
+				<ref bean="application6"/>
 			</list>
 		</property>
 		<property name="complaints">
 			<list>
+				<ref bean="complaint3"/>
 				<ref bean="complaint4"/>
 			</list>
 		</property><property name="phases">
@@ -1879,12 +1841,11 @@
 		<property name="warranty" ref="warranty5"/>
 		<property name="applications">
 			<list>
-				<ref bean="application1"/>
+				<ref bean="application7"/>
 			</list>
 		</property>
 		<property name="complaints">
 			<list>
-				<ref bean="complaint5"/>
 			</list>
 		</property><property name="phases">
 			<list>
@@ -1914,11 +1875,7 @@
 			</list>
 		</property>
 		<property name="handyWorker" ref="handyWorker1"/>
-		<property name="fixUpTasks">
-		<list>
-			<ref bean="fixUpTask1"/>
-		</list>
-		</property>
+		<property name="fixUpTasks" ref="fixUpTask1"/>
 	</bean>
 	<bean id="application2" class="domain.Application">
 		<property name="moment" value="15:40:03 13/11/2018"/>
@@ -1942,11 +1899,7 @@
 			</list>
 		</property>
 		<property name="handyWorker" ref="handyWorker2"/>
-		<property name="fixUpTasks">
-		<list>
-			<ref bean="fixUpTask2"/>
-		</list>
-		</property>
+		<property name="fixUpTasks" ref="fixUpTask2"/>
 	</bean>
 	
 	<bean id="application3" class="domain.Application">
@@ -1969,11 +1922,7 @@
 			</list>
 		</property>
 		<property name="handyWorker" ref="handyWorker1"/>
-		<property name="fixUpTasks">
-		<list>
-			<ref bean="fixUpTask3"/>
-		</list>
-		</property>
+		<property name="fixUpTasks" ref="fixUpTask3"/>
 	</bean>
 	
 	<bean id="application4" class="domain.Application">
@@ -1996,11 +1945,7 @@
 			</list>
 		</property>
 		<property name="handyWorker" ref="handyWorker3"/>
-		<property name="fixUpTasks">
-		<list>
-			<ref bean="fixUpTask3"/>
-		</list>
-		</property>
+		<property name="fixUpTasks" ref="fixUpTask3"/>
 	</bean>
 	
 	<bean id="application5" class="domain.Application">
@@ -2023,11 +1968,7 @@
 			</list>
 		</property>
 		<property name="handyWorker" ref="handyWorker4"/>
-		<property name="fixUpTasks">
-		<list>
-			<ref bean="fixUpTask4"/>
-		</list>
-		</property>
+		<property name="fixUpTasks" ref="fixUpTask4"/>
 	</bean>
 	
 	<bean id="application6" class="domain.Application">
@@ -2050,11 +1991,7 @@
 			</list>
 		</property>
 		<property name="handyWorker" ref="handyWorker4"/>
-		<property name="fixUpTasks">
-		<list>
-			<ref bean="fixUpTask4"/>
-		</list>
-		</property>
+		<property name="fixUpTasks" ref="fixUpTask4"/>
 	</bean>
 	
 	<bean id="application7" class="domain.Application">
@@ -2077,10 +2014,6 @@
 			</list>
 		</property>
 		<property name="handyWorker" ref="handyWorker5"/>
-		<property name="fixUpTasks">
-		<list>
-			<ref bean="fixUpTask5"/>
-		</list>
-		</property>
+		<property name="fixUpTasks" ref="fixUpTask5"/>
 	</bean>
 </beans>

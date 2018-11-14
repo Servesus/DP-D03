@@ -9,8 +9,8 @@ import javax.persistence.AccessType;
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
@@ -23,15 +23,15 @@ import org.hibernate.validator.constraints.NotBlank;
 @Access(AccessType.PROPERTY)
 public class Complaint extends DomainEntity {
 
-	private String					ticker;
-	private Date					moment;
-	private String					description;
-	private Collection<String>		attachment;
+	private String				ticker;
+	private Date				moment;
+	private String				description;
+	private Collection<String>	attachment;
 
 	//Relationships:
-	private Customer				customer;
-	private Collection<Report>		reports;
-	private Collection<FixUpTask>	fixUpTasks;
+	private Customer			customer;
+	private Collection<Report>	reports;
+	private FixUpTask			fixUpTasks;
 
 
 	@NotBlank
@@ -84,7 +84,7 @@ public class Complaint extends DomainEntity {
 		this.customer = customer;
 	}
 
-	@ManyToMany(mappedBy = "complaint")
+	@OneToMany(mappedBy = "complaint")
 	public Collection<Report> getReports() {
 		return this.reports;
 	}
@@ -93,12 +93,12 @@ public class Complaint extends DomainEntity {
 		this.reports = reports;
 	}
 
-	@ManyToMany
-	public Collection<FixUpTask> getFixUpTasks() {
+	@ManyToOne(optional = false)
+	public FixUpTask getFixUpTasks() {
 		return this.fixUpTasks;
 	}
 
-	public void setFixUpTasks(final Collection<FixUpTask> fixUpTasks) {
+	public void setFixUpTasks(final FixUpTask fixUpTasks) {
 		this.fixUpTasks = fixUpTasks;
 	}
 
