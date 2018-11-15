@@ -216,18 +216,15 @@ fix-up-task. We also multiply the result by 100.0 to make it a ratio
 
 /*Query B/4:The top-three customers in terms of complaints.*/
 
-select c.name from Customer c join c.complaints com order by com.size DESC;
+select c.name from Customer c join c.complaints com group by c.id order by com.size DESC;
 
 /*In this query, as it was not posible to take the top 3, we took the customers and ordered them by the number of
 complaints they have.
 */
 
 /*Result:
-5 objects selected
+2 objects selected
 "customer1"
-"customer1"
-"customer1"
-"customer2"
 "customer2"
 
 */
@@ -236,7 +233,7 @@ complaints they have.
 
 /*Query B/5:The top-three handy workers in terms of complaints.*/
 
-select h.name from HandyWorker h join h.applications a join a.fixUpTasks t order by t.complaints.size DESC;
+select h.name from HandyWorker h join h.applications a join a.fixUpTasks t group by h.id order by t.complaints.size DESC;
 
 /*In this query, as it was not posible to take the top 3, we took the handy workers and ordered them by the number of
 complaints they have. We need to select the applications too, because Application is an associative entity between
@@ -244,12 +241,10 @@ handy worker and complaint
 */
 
 /*Result:
-7 objects selected
+5 objects selected
 "handyWorker2"
 "handyWorker4"
-"handyWorker4"
 "handyWorker1"
-"handyWorker3"
 "handyWorker3"
 "handyWorker5"
 
