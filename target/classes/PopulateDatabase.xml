@@ -1902,7 +1902,7 @@
 				<value>Comentario 1 del handy worker</value>
 			</list>
 		</property>
-		<property name="handyWorker" ref="handyWorker1"/>
+		<property name="handyWorker" ref="handyWorker3"/>
 		<property name="fixUpTasks" ref="fixUpTask3"/>
 	</bean>
 	
