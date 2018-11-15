@@ -33,8 +33,6 @@ The ratio of pending applications.
 
 select 100.0*(select count(a) from Application a where a.status = 0)/count(a) from Application a;
 
-Sale lo que tiene que salir, no me preguntes como lo he hecho
-
 The ratio of accepted applications.
 
 select 100.0*(select count(a) from Application a where a.status = 1)/count(a) from Application a;
@@ -46,7 +44,16 @@ select 100.0*(select count(a) from Application a where a.status = -1)/count(a) f
 The listing of customers who have published at least 10% more fix-up tasks
 than the average, ordered by number of applications.
 
-select c from Customer c where (c.fixUpTasks.size >= 1.1*(select avg(c.fixUpTasks.size) from Customer c));
+select c from Customer c join c.fixUpTasks f where
+(c.fixUpTasks.size >= 1.1*(select avg(c.fixUpTasks.size) from Customer c))
+group by c.id order by f.applications.size DESC;
+
+The listing of handy workers who have got accepted at least 10% more applications
+than the average, ordered by number of applications.
+
+select h from HandyWorker h join h.application a where((select count(h) from HandyWorker h join h.applications a 
+where a.status=1) >= (0.1*(select 100.0*(select count(a) from HandyWorker h join h.applications
+a where a.status=1)/count(h) from HandyWorker h))) order by a.size DESC);
 
 The ratio of pending applications that cannot change its status because their
 time period’s elapsed.
@@ -72,3 +79,11 @@ select stddev (r.notes.size) from Report r;
 The ratio of fix-up tasks with a complaint.
 
 select 100.0*(select count(f) from FixUpTask f where f.complaints.size > 0)/count(f) from FixUpTask f;
+
+The top-three customers in terms of complaints.
+
+select c from Customer c join c.complaints com order by com.size DESC;
+
+The top-three handy workers in terms of complaints.
+
+select h from HandyWorker h join h.applications a join a.fixUpTasks t order by t.complaints.size DESC;
