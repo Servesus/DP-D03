@@ -1728,7 +1728,7 @@
 		</property>
 		<property name="complaints">
 			<list>
-				<ref bean="complaint1"/>
+			<ref bean="complaint1"/>
 			</list>
 		</property><property name="phases">
 			<list>

@@ -71,4 +71,4 @@ select stddev (r.notes.size) from Report r;
 
 The ratio of fix-up tasks with a complaint.
 
-select (count(g)/count(f))*100.0 from FixUpTask f,FixUpTask g where g.complaints.size > 0;
+select 100.0*(select count(f) from FixUpTask f where f.complaints.size > 0)/count(f) from FixUpTask f;
